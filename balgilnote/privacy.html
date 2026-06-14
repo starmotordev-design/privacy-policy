@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>발길노트 개인정보처리방침</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        h2 { margin-top: 30px; }
+        ul { padding-left: 20px; }
+        table { border-collapse: collapse; width: 100%; margin: 10px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; }
+        th { background-color: #f5f5f5; }
+    </style>
+</head>
+<body>
+
+    <h1>개인정보처리방침</h1>
+    <p><strong>시행일자: 2026년 6월 14일</strong></p>
+
+    <p>박상윤(이하 "운영자")은 개인정보보호법 및 관련 법령에 따라 이용자의 개인정보를 보호하고, 이와 관련한 고충을 신속하게 처리하기 위해 다음과 같이 개인정보처리방침을 수립·공개합니다.</p>
+
+    <h2>1. 개인정보의 처리 목적</h2>
+    <p>운영자는 다음의 목적으로만 개인정보를 처리하며, 목적 외의 용도로는 이용하지 않습니다.</p>
+    <ul>
+        <li>회원 가입 및 본인 인증</li>
+        <li>AI 여행 일정 생성 및 저장</li>
+        <li>카카오 장소 검색 및 지도 서비스 제공</li>
+        <li>서비스 품질 개선 및 오류 분석</li>
+    </ul>
+
+    <h2>2. 처리하는 개인정보 항목</h2>
+
+    <p><strong>[필수 항목]</strong></p>
+    <ul>
+        <li><strong>이메일 주소</strong> — 회원 가입 및 로그인</li>
+        <li><strong>이름(닉네임)</strong> — Google 계정 연동 시 자동 수집, 서비스 내 표시용</li>
+    </ul>
+
+    <p><strong>[서비스 이용 중 생성·저장되는 정보]</strong></p>
+    <ul>
+        <li>이용자가 입력한 장소 정보 (장소명, 주소, 위도·경도)</li>
+        <li>생성·저장한 여행 일정 데이터</li>
+    </ul>
+
+    <p><strong>[선택 항목]</strong></p>
+    <ul>
+        <li><strong>기기 위치 정보</strong> — 주변 장소 검색 기능 이용 시 (이용자가 권한을 허용한 경우에만 수집)</li>
+    </ul>
+
+    <p><strong>[자동 수집]</strong></p>
+    <ul>
+        <li>기기 식별 정보(Firebase 익명 ID) — 서비스 오류 분석 및 보안 목적</li>
+    </ul>
+
+    <h2>3. 개인정보의 처리 및 보유 기간</h2>
+    <ul>
+        <li>회원 정보: 회원 탈퇴 시까지</li>
+        <li>여행 일정 데이터: 회원 탈퇴 시 즉시 삭제</li>
+        <li>법령에 의한 보존 의무가 있는 경우 해당 기간 동안 보관</li>
+    </ul>
+
+    <h2>4. 개인정보의 제3자 제공</h2>
+    <p>운영자는 이용자의 개인정보를 원칙적으로 제3자에게 제공하지 않습니다. 다만, 이용자가 사전에 동의한 경우 또는 법령의 규정에 의거한 경우는 예외로 합니다.</p>
+
+    <h2>5. 개인정보 처리의 위탁</h2>
+    <p>운영자는 서비스 운영을 위해 아래와 같이 개인정보 처리를 위탁합니다.</p>
+    <table>
+        <tr><th>수탁자</th><th>위탁 업무</th><th>보유 기간</th></tr>
+        <tr>
+            <td>Google LLC (Firebase)</td>
+            <td>회원 인증(Firebase Authentication), 데이터 저장(Cloud Firestore), 서버 연산(Cloud Functions), AI 일정 생성(Gemini API)</td>
+            <td>위탁 계약 종료 시까지</td>
+        </tr>
+        <tr>
+            <td>카카오 주식회사</td>
+            <td>지도 표시(카카오맵 SDK), 장소 검색(카카오 Local API)</td>
+            <td>위탁 계약 종료 시까지</td>
+        </tr>
+    </table>
+    <ul>
+        <li>Google 개인정보처리방침: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+        <li>카카오 개인정보처리방침: <a href="https://www.kakao.com/policy/privacy" target="_blank">https://www.kakao.com/policy/privacy</a></li>
+    </ul>
+
+    <h2>6. 개인정보의 파기</h2>
+    <ul>
+        <li>개인정보 처리 목적 달성 시 지체 없이 파기합니다.</li>
+        <li>전자 파일 형태는 복구 불가능한 방법으로 영구 삭제합니다.</li>
+        <li>회원 탈퇴 시 Firebase Authentication 계정 및 Firestore 저장 데이터는 즉시 삭제됩니다.</li>
+    </ul>
+
+    <h2>7. 이용자의 권리·의무 및 행사 방법</h2>
+    <p>이용자는 다음의 권리를 행사할 수 있습니다.</p>
+    <ul>
+        <li>개인정보 열람 요구</li>
+        <li>오류 정정 요구</li>
+        <li>삭제 요구</li>
+        <li>처리 정지 요구</li>
+    </ul>
+    <p>위 권리는 앱 내 설정 → 계정 관리 메뉴 또는 아래 이메일로 요청할 수 있으며, 운영자는 10일 이내에 처리합니다.</p>
+
+    <h2>8. 위치 정보 관련</h2>
+    <ul>
+        <li>주변 장소 검색 기능 사용 시 이용자의 현재 위치 정보를 일시적으로 사용합니다.</li>
+        <li>위치 정보는 서버에 저장되지 않으며 해당 검색 요청 처리 후 즉시 폐기됩니다.</li>
+        <li>이용자는 기기 설정에서 언제든지 위치 권한을 철회할 수 있습니다.</li>
+    </ul>
+
+    <h2>9. 개인정보의 안전성 확보 조치</h2>
+    <ul>
+        <li>전송 구간 TLS 암호화 적용 (Firebase 플랫폼)</li>
+        <li>Firebase Security Rules를 통한 이용자별 데이터 접근 제한</li>
+        <li>API Key VCS 제외 및 빌드 환경변수 관리</li>
+        <li>서비스 제공에 필요한 최소한의 개인정보만 수집</li>
+    </ul>
+
+    <h2>10. 개인정보 보호책임자</h2>
+    <ul>
+        <li><strong>담당자:</strong> 박상윤</li>
+        <li><strong>이메일:</strong> starmotor.dev@gmail.com</li>
+        <li><strong>처리 기간:</strong> 문의 접수 후 10일 이내 회신</li>
+    </ul>
+
+    <p>개인정보 침해 신고·상담 기관:</p>
+    <ul>
+        <li>개인정보분쟁조정위원회: <a href="https://www.kopico.go.kr" target="_blank">www.kopico.go.kr</a> / 1833-6972</li>
+        <li>한국인터넷진흥원 개인정보 침해신고센터: <a href="https://privacy.kisa.or.kr" target="_blank">privacy.kisa.or.kr</a> / 118</li>
+        <li>대검찰청 사이버범죄수사단: <a href="https://www.spo.go.kr" target="_blank">www.spo.go.kr</a> / 02-3480-3573</li>
+        <li>경찰청 사이버수사국: <a href="https://ecrm.cyber.go.kr" target="_blank">ecrm.cyber.go.kr</a> / 182</li>
+    </ul>
+
+    <h2>11. 개인정보처리방침의 변경</h2>
+    <p>본 방침은 시행일로부터 적용되며, 변경 시 앱 내 공지를 통해 7일 전 사전 고지합니다. 수집 항목 추가 등 중요 변경 사항은 30일 전에 고지합니다.</p>
+
+</body>
+</html>
