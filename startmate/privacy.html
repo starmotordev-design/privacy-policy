@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>개인정보처리방침 — 창업메이트</title>
+<style>
+  :root{
+    --bg:#f6f7fb; --card:#ffffff; --text:#1c2033; --muted:#5c6480; --line:#e6e9f2;
+    --brand:#6c5ce7; --brand2:#5b8def; --soft:#f0edff; --warn-bg:#fff7ed; --warn-line:#fdba74;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0a0b16; --card:#12142a; --text:#e9ebf7; --muted:#9aa3c4; --line:#242849;
+      --brand:#8f7dff; --brand2:#6f9bff; --soft:#1a1b3a; --warn-bg:#2a1f14; --warn-line:#a16207;
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);line-height:1.75;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Malgun Gothic",sans-serif;
+    -webkit-text-size-adjust:100%}
+
+  .hero{background:linear-gradient(135deg,#4c3fd4 0%,#6c5ce7 45%,#5b8def 100%);color:#fff;
+    padding:56px 24px 64px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;top:-120px;right:-60px;width:360px;height:360px;
+    background:radial-gradient(circle,rgba(255,255,255,.22),transparent 65%)}
+  .hero-in{max-width:820px;margin:0 auto;position:relative;z-index:1}
+  .brand{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:14px;
+    letter-spacing:.4px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+    padding:7px 14px;border-radius:99px}
+  .hero h1{font-size:34px;font-weight:800;letter-spacing:-.8px;margin-top:20px;line-height:1.25}
+  .hero .date{margin-top:12px;font-size:14px;color:rgba(255,255,255,.82)}
+  .tabs{display:flex;gap:8px;margin-top:26px;flex-wrap:wrap}
+  .tabs a{font-size:14px;font-weight:600;text-decoration:none;padding:9px 16px;border-radius:11px;
+    background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.22);transition:.15s}
+  .tabs a:hover{background:rgba(255,255,255,.24)}
+  .tabs a[aria-current]{background:#fff;color:#4c3fd4;border-color:#fff}
+
+  main{max-width:820px;margin:-32px auto 0;padding:0 24px 80px;position:relative;z-index:2}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px 30px;
+    box-shadow:0 10px 40px rgba(20,24,60,.06)}
+  @media (max-width:600px){ .card{padding:26px 20px} .hero h1{font-size:26px} }
+
+  .lead{font-size:15.5px;color:var(--muted)}
+  .toc{margin:26px 0 8px;display:flex;flex-wrap:wrap;gap:7px}
+  .toc a{font-size:13px;text-decoration:none;color:var(--brand);background:var(--soft);
+    border-radius:8px;padding:6px 11px;border:1px solid transparent}
+  .toc a:hover{border-color:var(--brand)}
+
+  section{margin-top:40px;scroll-margin-top:20px}
+  h2{font-size:19px;font-weight:800;letter-spacing:-.3px;display:flex;align-items:center;gap:11px}
+  h2 .n{flex:0 0 auto;width:28px;height:28px;border-radius:9px;font-size:13px;
+    background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800}
+  section > p, section > ul, section > .note, section > table, section > .tbl{margin-top:14px}
+  p{font-size:15px}
+  ul{padding-left:20px}
+  li{font-size:15px;margin-bottom:7px}
+  b,strong{font-weight:700}
+  code{background:var(--soft);padding:2px 6px;border-radius:6px;font-size:13.5px}
+
+  .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+  th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top}
+  th{background:var(--soft);font-weight:700;white-space:nowrap}
+
+  .note{background:var(--soft);border-left:3px solid var(--brand);border-radius:0 12px 12px 0;
+    padding:15px 18px;font-size:14.5px;color:var(--text)}
+  .note b{color:var(--brand)}
+  .warn{background:var(--warn-bg);border-left:3px solid var(--warn-line);border-radius:0 12px 12px 0;
+    padding:15px 18px;font-size:14.5px}
+
+  footer{max-width:820px;margin:0 auto;padding:0 24px 60px;color:var(--muted);font-size:13.5px}
+  footer a{color:var(--brand)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-in">
+    <span class="brand">✦ 창업메이트 StartMate</span>
+    <h1>개인정보처리방침</h1>
+    <div class="date">시행일자 : 2026년 7월 26일</div>
+    <nav class="tabs">
+      <a href="privacy.html" aria-current="page">개인정보처리방침</a>
+      <a href="terms.html">이용약관</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="card">
+
+  <p class="lead">
+    박상윤(이하 "운영자")은 「개인정보 보호법」 및 관련 법령에 따라 이용자의 개인정보를 보호하고,
+    이와 관련한 고충을 신속하게 처리하기 위해 다음과 같이 개인정보처리방침을 수립·공개합니다.
+    본 방침은 모바일 애플리케이션 <b>창업메이트(StartMate)</b>(패키지명 <code>com.startmate.app</code>)에 적용됩니다.
+  </p>
+
+  <div class="toc">
+    <a href="#s1">1. 처리 목적</a>
+    <a href="#s2">2. 수집 항목</a>
+    <a href="#s3">3. AI 처리 고지</a>
+    <a href="#s4">4. 보유 기간</a>
+    <a href="#s5">5. 제3자 제공</a>
+    <a href="#s6">6. 처리 위탁·국외이전</a>
+    <a href="#s7">7. 광고</a>
+    <a href="#s8">8. 이용자 권리</a>
+    <a href="#s9">9. 파기</a>
+    <a href="#s10">10. 안전성 확보</a>
+    <a href="#s11">11. 아동</a>
+    <a href="#s12">12. 책임자·문의</a>
+    <a href="#s13">13. 변경 고지</a>
+  </div>
+
+  <section id="s1">
+    <h2><span class="n">1</span>개인정보의 처리 목적</h2>
+    <p>운영자는 다음 목적으로만 개인정보를 처리하며, 목적이 변경될 경우 사전에 동의를 받습니다.</p>
+    <ul>
+      <li>회원 가입·본인 확인·계정 관리</li>
+      <li>이용자 프로필 기반 <b>AI 사업 아이템 추천 및 사업성 분석 리포트 생성</b></li>
+      <li>생성된 분석·프로젝트·PDF 리포트의 저장 및 재열람 제공</li>
+      <li>상세분석 이용권 결제 처리, 구매 검증, 잔액 관리 및 부정 거래 방지</li>
+      <li>서비스 과다 사용·자동화 남용 방지(기능별 이용 횟수 집계)</li>
+      <li>광고 게재 및 서비스 품질 개선·오류 분석</li>
+    </ul>
+  </section>
+
+  <section id="s2">
+    <h2><span class="n">2</span>처리하는 개인정보 항목</h2>
+    <div class="tbl">
+      <table>
+        <tr><th>구분</th><th>항목</th><th>수집 시점</th></tr>
+        <tr>
+          <td>계정 정보<br><b>(필수)</b></td>
+          <td>이메일 주소, 이름(닉네임), 프로필 사진 URL(Google 로그인 시 자동 연동)</td>
+          <td>회원가입·로그인</td>
+        </tr>
+        <tr>
+          <td>창업 프로필<br><b>(필수)</b></td>
+          <td>관심 분야, 직업, 보유 역량, 경력, 가용 자본, 주당 투입 가능 시간, 월 목표 수익</td>
+          <td>프로필 설정·수정 시 이용자가 직접 입력</td>
+        </tr>
+        <tr>
+          <td>서비스 이용 중<br>생성되는 정보</td>
+          <td>AI가 생성한 추천 아이템·사업성 검증 결과·상세 분석 리포트·사업 방향성·MVP 설계·실행 로드맵,
+              이용자가 저장한 프로젝트(제목·진행 상태·메모), 생성된 PDF 리포트 파일</td>
+          <td>서비스 이용 중</td>
+        </tr>
+        <tr>
+          <td>결제 정보</td>
+          <td>구매 상품 ID, Google Play 구매 토큰, 결제 일시·상태, 이용권 잔액 및 적립·사용 내역
+              <br><span style="color:var(--muted);font-size:13px">※ 카드번호 등 결제수단 정보는 Google Play가 처리하며 운영자는 보관하지 않습니다.</span></td>
+          <td>이용권 구매 시</td>
+        </tr>
+        <tr>
+          <td>자동 수집</td>
+          <td>광고 식별자(AAID), 기기·앱 버전 정보, 오류 로그, 기능별 이용 횟수(일·월 카운터)</td>
+          <td>앱 이용 중 자동</td>
+        </tr>
+      </table>
+    </div>
+    <div class="note">
+      <b>수집하지 않는 정보</b> — 본 앱은 위치 정보, 연락처, 사진·미디어, 통화 기록, 주민등록번호 등
+      민감정보·고유식별정보를 수집하지 않습니다.
+    </div>
+  </section>
+
+  <section id="s3">
+    <h2><span class="n">3</span>AI 처리에 관한 고지</h2>
+    <p>
+      본 서비스의 추천·분석 기능은 이용자가 입력한 창업 프로필과 분석 대상 아이템 정보를
+      운영자의 서버(Google Cloud Functions)를 거쳐 <b>Google Gemini API</b>로 전송하여 결과를 생성합니다.
+    </p>
+    <ul>
+      <li>AI에 전달되는 정보는 <b>관심 분야·직업·보유 역량·경력·가용 자본·주당 시간·목표 수익</b>과
+          분석 대상 아이템 텍스트입니다.</li>
+      <li>이름, 이메일 주소 등 <b>이용자를 식별할 수 있는 정보는 AI로 전송되지 않습니다.</b></li>
+      <li>앱에서 AI API를 직접 호출하지 않으며, 모든 호출은 운영자 서버를 경유합니다.</li>
+    </ul>
+    <div class="warn">
+      AI가 생성한 분석·전략·로드맵은 <b>참고 자료</b>이며 사업의 성공이나 수익을 보장하지 않습니다.
+      최종 판단과 그 결과에 대한 책임은 이용자에게 있습니다. (자세한 내용은 이용약관 제11조)
+    </div>
+  </section>
+
+  <section id="s4">
+    <h2><span class="n">4</span>개인정보의 보유 및 이용 기간</h2>
+    <ul>
+      <li><b>계정·프로필 정보</b> : 회원 탈퇴 시 즉시 파기</li>
+      <li><b>분석 결과·프로젝트·PDF 리포트</b> : 회원 탈퇴 시 즉시 파기(저장소의 PDF 파일 포함)</li>
+      <li><b>이용권 잔액·적립/사용 내역</b> : 회원 탈퇴 시 즉시 파기(잔여 이용권은 소멸)</li>
+      <li><b>이용 횟수 카운터</b> : 회원 탈퇴 시 즉시 파기</li>
+    </ul>
+    <div class="note">
+      <b>예외 — 결제 중복 방지 기록</b><br>
+      동일한 결제가 두 번 적립되는 것을 막기 위해 <b>구매 토큰의 해시값·상품 ID·처리 일시</b>를
+      탈퇴 후에도 보관합니다. 이 기록만으로는 개인을 식별할 수 없으며, 이용권 재적립 방지 외의 목적으로 이용하지 않습니다.
+    </div>
+    <p>또한 다음 법령에 따라 보존이 필요한 경우 해당 기간 동안 보관합니다.</p>
+    <ul>
+      <li>대금 결제 및 재화 등의 공급에 관한 기록 : 5년 (전자상거래 등에서의 소비자보호에 관한 법률)</li>
+      <li>소비자의 불만 또는 분쟁 처리에 관한 기록 : 3년 (동법)</li>
+      <li>서비스 접속 기록 : 3개월 (통신비밀보호법)</li>
+    </ul>
+  </section>
+
+  <section id="s5">
+    <h2><span class="n">5</span>개인정보의 제3자 제공</h2>
+    <p>
+      운영자는 이용자의 개인정보를 제3자에게 제공하지 않습니다.
+      다만 이용자가 사전에 동의한 경우 또는 법령에 근거하여 수사기관 등이 적법한 절차로 요구하는 경우는 예외로 합니다.
+    </p>
+  </section>
+
+  <section id="s6">
+    <h2><span class="n">6</span>개인정보 처리의 위탁 및 국외 이전</h2>
+    <p>운영자는 서비스 제공을 위해 아래와 같이 개인정보 처리를 위탁하고 있습니다.</p>
+    <div class="tbl">
+      <table>
+        <tr><th>수탁자</th><th>위탁 업무</th><th>이전 항목</th></tr>
+        <tr>
+          <td>Google LLC<br>(Firebase)</td>
+          <td>회원 인증, 데이터 저장(Cloud Firestore), 서버 연산(Cloud Functions), 파일 저장(Cloud Storage)</td>
+          <td>계정 정보, 창업 프로필, 분석·프로젝트 데이터, PDF 파일</td>
+        </tr>
+        <tr>
+          <td>Google LLC<br>(Gemini API)</td>
+          <td>AI 사업 아이템 추천 및 분석 리포트 생성</td>
+          <td>창업 프로필, 분석 대상 아이템 텍스트 (식별정보 제외)</td>
+        </tr>
+        <tr>
+          <td>Google LLC<br>(Google Play 결제)</td>
+          <td>인앱 결제 처리 및 구매 검증</td>
+          <td>구매 토큰, 상품 ID, 거래 내역</td>
+        </tr>
+        <tr>
+          <td>Google LLC<br>(AdMob)</td>
+          <td>광고 게재 및 효과 측정</td>
+          <td>광고 식별자, 기기 정보</td>
+        </tr>
+      </table>
+    </div>
+    <p style="color:var(--muted);font-size:14px">
+      이전되는 국가 : 미국 등 Google이 운영하는 데이터센터 소재국 · 이전 일시 및 방법 : 서비스 이용 시점에 네트워크를 통해 전송 ·
+      이전받는 자의 개인정보 보호책임자 연락처 : <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a> 참조 ·
+      보유 기간 : 위탁 계약 종료 또는 위 제4항의 보유 기간까지
+    </p>
+  </section>
+
+  <section id="s7">
+    <h2><span class="n">7</span>광고 및 광고 식별자</h2>
+    <p>
+      본 서비스는 무료 기능 제공을 위해 Google AdMob 광고(배너·네이티브·리워드 광고)를 게재하며,
+      이 과정에서 광고 식별자(AAID) 등이 수집될 수 있습니다.
+    </p>
+    <ul>
+      <li>맞춤형 광고를 원하지 않으실 경우 <b>기기 설정 → 개인정보 보호 → 광고</b>에서
+          "광고 ID 삭제" 또는 "광고 개인 최적화 선택 해제"를 설정하실 수 있습니다.</li>
+      <li>리워드 광고 시청은 이용자의 선택이며, 시청하지 않아도 서비스 이용에 제한은 없습니다.</li>
+    </ul>
+  </section>
+
+  <section id="s8">
+    <h2><span class="n">8</span>이용자의 권리와 행사 방법</h2>
+    <p>이용자는 언제든지 다음 권리를 행사할 수 있습니다.</p>
+    <ul>
+      <li><b>열람·정정</b> : 앱 내 <b>내 정보 → 프로필 수정</b>에서 직접 확인·수정</li>
+      <li><b>삭제·처리정지</b> : 앱 내 <b>내 정보 → 회원 탈퇴</b>로 계정과 모든 데이터 즉시 삭제</li>
+      <li>위 방법 외에 아래 문의처로 요청하실 수 있으며, 접수 후 지체 없이 처리합니다.</li>
+    </ul>
+    <div class="warn">
+      회원 탈퇴 시 분석 리포트·프로젝트·<b>잔여 이용권</b>이 모두 삭제되며 복구할 수 없습니다.
+    </div>
+  </section>
+
+  <section id="s9">
+    <h2><span class="n">9</span>개인정보의 파기 절차 및 방법</h2>
+    <ul>
+      <li>보유 기간이 지나거나 처리 목적이 달성된 개인정보는 지체 없이 파기합니다.</li>
+      <li>전자적 파일 형태의 정보는 복구·재생이 불가능한 방법으로 영구 삭제합니다.</li>
+      <li>회원 탈퇴 요청 시 서버에서 계정·프로필·분석·프로젝트·이용권 내역·저장된 PDF 파일을 삭제한 뒤
+          인증 계정을 삭제합니다.</li>
+    </ul>
+  </section>
+
+  <section id="s10">
+    <h2><span class="n">10</span>개인정보의 안전성 확보 조치</h2>
+    <ul>
+      <li>모든 통신 구간은 HTTPS(TLS)로 암호화하여 전송합니다.</li>
+      <li>데이터베이스 보안 규칙을 통해 <b>이용자는 자신의 데이터만 조회</b>할 수 있도록 제한합니다.</li>
+      <li>이용권 잔액 등 결제와 연관된 값은 클라이언트에서 변경할 수 없으며 서버에서만 처리합니다.</li>
+      <li>모든 결제는 Google Play 서버 검증을 통과한 경우에만 처리합니다.</li>
+      <li>AI 호출에 사용하는 인증 키는 서버의 보안 저장소(Secret Manager)에 보관하며 앱에 포함하지 않습니다.</li>
+    </ul>
+  </section>
+
+  <section id="s11">
+    <h2><span class="n">11</span>만 14세 미만 아동의 개인정보</h2>
+    <p>
+      본 서비스는 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 고의로 수집하지 않습니다.
+      만 14세 미만 아동의 개인정보가 수집된 사실을 알게 된 경우 즉시 해당 정보를 파기합니다.
+    </p>
+  </section>
+
+  <section id="s12">
+    <h2><span class="n">12</span>개인정보 보호책임자 및 문의처</h2>
+    <ul>
+      <li><b>책임자</b> : 박상윤 (개인 개발자)</li>
+      <li><b>이메일</b> : <a href="mailto:starmotor.dev@gmail.com">starmotor.dev@gmail.com</a></li>
+    </ul>
+    <p style="color:var(--muted);font-size:14px">
+      개인정보 침해에 대한 신고·상담이 필요하신 경우 개인정보침해신고센터(privacy.kisa.or.kr, 국번없이 118),
+      대검찰청 사이버수사과(1301), 경찰청 사이버수사국(ecrm.police.go.kr, 182)으로 문의하실 수 있습니다.
+    </p>
+  </section>
+
+  <section id="s13">
+    <h2><span class="n">13</span>개인정보처리방침의 변경</h2>
+    <p>
+      법령·서비스의 변경에 따라 본 방침이 수정될 수 있으며, 변경 시 앱 내 공지 또는 본 페이지를 통해
+      시행 7일 전부터 알립니다. 이용자에게 불리한 중대한 변경의 경우 30일 전에 알립니다.
+    </p>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  창업메이트(StartMate) · 문의 <a href="mailto:starmotor.dev@gmail.com">starmotor.dev@gmail.com</a><br>
+  시행일자 2026년 7월 26일
+</footer>
+
+</body>
+</html>
