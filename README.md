@@ -8,6 +8,7 @@
 |----|------|------|
 | 발길노트 | `balgilnote/` | `privacy.html` · `terms.html` |
 | 창업메이트 (StartMate) | `startmate/` | `index.html` · `privacy.html` · `terms.html` |
+| 꿈해몽어때 | `kkumhaemongotta/` | `privacy.html` |
 
 ## URL (Play Console 등록용)
 
@@ -15,6 +16,8 @@
 https://starmotordev-design.github.io/privacy-policy/startmate/privacy.html   ← 개인정보처리방침
 https://starmotordev-design.github.io/privacy-policy/startmate/terms.html     ← 이용약관
 https://starmotordev-design.github.io/privacy-policy/startmate/               ← 두 문서 목차
+
+https://starmotordev-design.github.io/privacy-policy/kkumhaemongotta/privacy.html   ← 꿈해몽어때 개인정보처리방침
 ```
 
 > Pages가 꺼져 있으면 GitHub 저장소 → Settings → Pages → Source를 `main` / `root`로 설정한다.
