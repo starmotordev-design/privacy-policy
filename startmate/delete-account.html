@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>계정 삭제 요청 — 창업메이트</title>
+<style>
+  :root{
+    --bg:#f6f7fb; --card:#ffffff; --text:#1c2033; --muted:#5c6480; --line:#e6e9f2;
+    --brand:#6c5ce7; --brand2:#5b8def; --soft:#f0edff; --warn-bg:#fff7ed; --warn-line:#fdba74;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0a0b16; --card:#12142a; --text:#e9ebf7; --muted:#9aa3c4; --line:#242849;
+      --brand:#8f7dff; --brand2:#6f9bff; --soft:#1a1b3a; --warn-bg:#2a1f14; --warn-line:#a16207;
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);line-height:1.75;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Malgun Gothic",sans-serif;
+    -webkit-text-size-adjust:100%}
+
+  .hero{background:linear-gradient(135deg,#4c3fd4 0%,#6c5ce7 45%,#5b8def 100%);color:#fff;
+    padding:56px 24px 64px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;top:-120px;right:-60px;width:360px;height:360px;
+    background:radial-gradient(circle,rgba(255,255,255,.22),transparent 65%)}
+  .hero-in{max-width:820px;margin:0 auto;position:relative;z-index:1}
+  .brand{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:14px;
+    letter-spacing:.4px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+    padding:7px 14px;border-radius:99px}
+  .hero h1{font-size:34px;font-weight:800;letter-spacing:-.8px;margin-top:20px;line-height:1.25}
+  .hero .date{margin-top:12px;font-size:14px;color:rgba(255,255,255,.82)}
+  .tabs{display:flex;gap:8px;margin-top:26px;flex-wrap:wrap}
+  .tabs a{font-size:14px;font-weight:600;text-decoration:none;padding:9px 16px;border-radius:11px;
+    background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.22);transition:.15s}
+  .tabs a:hover{background:rgba(255,255,255,.24)}
+  .tabs a[aria-current]{background:#fff;color:#4c3fd4;border-color:#fff}
+
+  main{max-width:820px;margin:-32px auto 0;padding:0 24px 80px;position:relative;z-index:2}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px 30px;
+    box-shadow:0 10px 40px rgba(20,24,60,.06)}
+  @media (max-width:600px){ .card{padding:26px 20px} .hero h1{font-size:26px} }
+
+  .lead{font-size:15.5px;color:var(--muted)}
+  section{margin-top:40px;scroll-margin-top:20px}
+  h2{font-size:19px;font-weight:800;letter-spacing:-.3px;display:flex;align-items:center;gap:11px}
+  h2 .n{flex:0 0 auto;width:28px;height:28px;border-radius:9px;font-size:13px;
+    background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800}
+  section > p, section > ul, section > ol, section > .note, section > .warn, section > .tbl{margin-top:14px}
+  p{font-size:15px}
+  ul,ol{padding-left:20px}
+  li{font-size:15px;margin-bottom:7px}
+  b,strong{font-weight:700}
+
+  .steps{list-style:none;padding:0;counter-reset:step}
+  .steps li{counter-increment:step;position:relative;padding-left:44px;margin-bottom:15px}
+  .steps li::before{content:counter(step);position:absolute;left:0;top:1px;width:28px;height:28px;
+    border-radius:9px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;
+    font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+
+  .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+  th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top}
+  th{background:var(--soft);font-weight:700;white-space:nowrap}
+
+  .note{background:var(--soft);border-left:3px solid var(--brand);border-radius:0 12px 12px 0;
+    padding:15px 18px;font-size:14.5px;color:var(--text)}
+  .note b{color:var(--brand)}
+  .warn{background:var(--warn-bg);border-left:3px solid var(--warn-line);border-radius:0 12px 12px 0;
+    padding:15px 18px;font-size:14.5px}
+
+  a{color:var(--brand)}
+  footer{max-width:820px;margin:0 auto;padding:0 24px 60px;color:var(--muted);font-size:13.5px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-in">
+    <span class="brand">✦ 창업메이트 (StartMate)</span>
+    <h1>계정 및 데이터 삭제 요청</h1>
+    <div class="date">개발자 SY Park (개인 개발자) · 문의 starmotor.dev@gmail.com</div>
+    <div class="tabs">
+      <a href="privacy.html">개인정보처리방침</a>
+      <a href="terms.html">이용약관</a>
+      <a href="delete-account.html" aria-current="page">계정 삭제</a>
+    </div>
+  </div>
+</div>
+
+<main>
+<div class="card">
+
+  <p class="lead">
+    이 페이지는 <b>창업메이트(StartMate)</b> 앱(패키지명 <code>com.startmate.app</code>, 개발자 SY Park)의
+    계정 및 관련 데이터 삭제를 요청하는 방법을 안내합니다. 앱 안에서 직접 삭제하거나, 앱을 이미 삭제하셨다면
+    이메일로 요청하실 수 있습니다.
+  </p>
+
+  <section id="in-app">
+    <h2><span class="n">1</span>앱에서 직접 삭제하기 (권장)</h2>
+    <p>가장 빠른 방법입니다. 요청 즉시 처리되며 별도의 대기 기간이 없습니다.</p>
+    <ol class="steps">
+      <li>창업메이트 앱을 실행하고 <b>로그인</b>합니다.</li>
+      <li>하단 탭에서 <b>내 정보</b>를 엽니다.</li>
+      <li>화면 맨 아래의 <b>‘회원 탈퇴’</b>를 누릅니다.</li>
+      <li>확인 창의 안내를 읽고 <b>‘회원 탈퇴’</b>를 다시 눌러 확정합니다.</li>
+      <li>처리가 끝나면 자동으로 로그아웃되며, 계정과 데이터가 삭제됩니다.</li>
+    </ol>
+    <div class="warn">
+      <b>되돌릴 수 없습니다.</b> 남아 있는 이용권(크레딧)은 삭제와 함께 소멸하며 환불·복구되지 않습니다.
+      저장한 분석 결과·프로젝트·PDF 리포트도 함께 사라집니다. 필요한 자료는 미리 내려받아 두세요.
+    </div>
+  </section>
+
+  <section id="by-email">
+    <h2><span class="n">2</span>이메일로 요청하기</h2>
+    <p>앱을 이미 삭제했거나 로그인할 수 없는 경우, 아래 주소로 요청해 주세요.</p>
+    <ol class="steps">
+      <li><a href="mailto:starmotor.dev@gmail.com?subject=%5B%EC%B0%BD%EC%97%85%EB%A9%94%EC%9D%B4%ED%8A%B8%5D%20%EA%B3%84%EC%A0%95%20%EC%82%AD%EC%A0%9C%20%EC%9A%94%EC%B2%AD">starmotor.dev@gmail.com</a>
+        으로 메일을 보냅니다. (제목: <b>[창업메이트] 계정 삭제 요청</b>)</li>
+      <li>본문에 <b>가입에 사용한 이메일 주소</b>를 적어 주세요. 본인 확인을 위해
+        <b>가입할 때 사용한 이메일 계정에서 직접</b> 보내주셔야 합니다.</li>
+      <li>본인 확인 후 <b>영업일 기준 7일 이내</b>에 삭제 처리하고, 완료 사실을 회신으로 알려드립니다.</li>
+    </ol>
+    <div class="note">
+      운영자는 요청 처리 목적으로만 해당 메일을 사용하며, 처리 완료 후 <b>30일 이내</b>에 요청 메일을 파기합니다.
+    </div>
+  </section>
+
+  <section id="what">
+    <h2><span class="n">3</span>삭제되는 데이터와 보관되는 데이터</h2>
+    <div class="tbl">
+      <table>
+        <tr><th>구분</th><th>항목</th><th>처리</th></tr>
+        <tr>
+          <td rowspan="5"><b>삭제</b></td>
+          <td>계정 정보 (이메일, 이름, 프로필 사진 URL)</td>
+          <td>즉시 삭제</td>
+        </tr>
+        <tr>
+          <td>프로필 (관심 분야, 직업, 보유 역량, 경력, 가용 자본, 주당 시간, 목표 수익)</td>
+          <td>즉시 삭제</td>
+        </tr>
+        <tr>
+          <td>분석 결과, 추천 아이템, 저장한 프로젝트</td>
+          <td>즉시 삭제</td>
+        </tr>
+        <tr>
+          <td>생성된 PDF 리포트 파일</td>
+          <td>즉시 삭제</td>
+        </tr>
+        <tr>
+          <td>이용권 잔액·적립/사용 내역, 이용 횟수 카운터</td>
+          <td>즉시 삭제 (잔여 이용권 소멸)</td>
+        </tr>
+        <tr>
+          <td rowspan="3"><b>보관</b></td>
+          <td>결제 식별값 (구매 토큰의 해시값)</td>
+          <td>동일 결제가 다시 접수될 때 이용권이 중복 적립되는 것을 막기 위해 보관합니다.
+              이 값만으로는 개인을 식별할 수 없습니다.</td>
+        </tr>
+        <tr>
+          <td>대금 결제 및 재화 공급에 관한 기록</td>
+          <td><b>5년</b> (전자상거래 등에서의 소비자보호에 관한 법률)</td>
+        </tr>
+        <tr>
+          <td>소비자 불만 또는 분쟁 처리에 관한 기록</td>
+          <td><b>3년</b> (동법)</td>
+        </tr>
+      </table>
+    </div>
+    <div class="note">
+      법령에 따라 보관하는 기록은 <b>보관 목적 외의 용도로 이용하지 않으며</b>, 보관 기간이 지나면 지체 없이 파기합니다.
+      Google Play를 통한 결제 수단 정보(카드번호 등)는 운영자가 보관하지 않습니다.
+    </div>
+    <p style="color:var(--muted);font-size:14px">
+      자세한 내용은 <a href="privacy.html">개인정보처리방침</a> 제4항(보유 및 이용 기간)과 제9항(파기)을 참고하세요.
+    </p>
+  </section>
+
+  <section id="notes">
+    <h2><span class="n">4</span>알아두실 점</h2>
+    <ul>
+      <li>계정을 삭제해도 <b>Google Play의 구매 내역</b>은 Google 계정에 남습니다. 이는 운영자가 삭제할 수 없습니다.</li>
+      <li>이미 사용한 이용권과 잔여 이용권은 환불 대상이 아닙니다. 환불은 Google Play 정책과
+        <a href="terms.html">이용약관</a>을 따릅니다.</li>
+      <li>앱만 삭제(제거)하는 것으로는 계정과 서버의 데이터가 지워지지 않습니다. 위 1번 또는 2번 절차를 진행해 주세요.</li>
+      <li>삭제 후 같은 이메일로 다시 가입할 수 있으나, 이전 데이터는 복구되지 않습니다.</li>
+    </ul>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  창업메이트(StartMate) · 개발자 SY Park · 문의 <a href="mailto:starmotor.dev@gmail.com">starmotor.dev@gmail.com</a><br>
+  시행일자 2026년 8월 12일
+</footer>
+
+</body>
+</html>
