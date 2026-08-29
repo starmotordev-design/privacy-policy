@@ -80,7 +80,7 @@
   <div class="hero-in">
     <span class="brand">✦ 창업메이트 StartMate</span>
     <h1>개인정보처리방침</h1>
-    <div class="date">시행일자 : 2026년 8월 26일 (최초 시행 2026년 7월 26일)</div>
+    <div class="date">시행일자 : 2026년 8월 29일 (최초 시행 2026년 7월 26일)</div>
     <nav class="tabs">
       <a href="privacy.html" aria-current="page">개인정보처리방침</a>
       <a href="terms.html">이용약관</a>
@@ -104,7 +104,7 @@
     <a href="#s4">4. 보유 기간</a>
     <a href="#s5">5. 제3자 제공</a>
     <a href="#s6">6. 처리 위탁·국외이전</a>
-    <a href="#s7">7. 광고</a>
+    <a href="#s7">7. 광고 미게재</a>
     <a href="#s8">8. 이용자 권리</a>
     <a href="#s9">9. 파기</a>
     <a href="#s10">10. 안전성 확보</a>
@@ -122,7 +122,7 @@
       <li>생성된 분석·프로젝트·PDF 리포트의 저장 및 재열람 제공</li>
       <li>상세분석 이용권 결제 처리, 구매 검증, 잔액 관리 및 부정 거래 방지</li>
       <li>서비스 과다 사용·자동화 남용 방지(기능별 이용 횟수 집계)</li>
-      <li>광고 게재 및 서비스 품질 개선·오류 분석</li>
+      <li>앱 이용 통계 분석, 서비스 품질 개선 및 오류 진단</li>
     </ul>
   </section>
 
@@ -155,7 +155,8 @@
         </tr>
         <tr>
           <td>자동 수집</td>
-          <td>광고 식별자(AAID), 기기·앱 버전 정보, 오류 로그, 기능별 이용 횟수(일·월 카운터)</td>
+          <td>광고 식별자(AAID), 기기·앱 버전 정보, 앱 설치 출처, 화면 조회·기능 사용 이벤트 로그,
+              오류 로그, 기능별 이용 횟수(일·월 카운터)</td>
           <td>앱 이용 중 자동</td>
         </tr>
       </table>
@@ -235,34 +236,37 @@
           <td>구매 토큰, 상품 ID, 거래 내역</td>
         </tr>
         <tr>
-          <td>AppLovin Corporation<br>(AppLovin MAX)</td>
-          <td>광고 게재 및 효과 측정</td>
-          <td>광고 식별자(AAID), 기기 정보</td>
+          <td>Google LLC<br>(Google Analytics for Firebase)</td>
+          <td>앱 이용 통계 분석 및 서비스 개선 (광고 게재·타겟팅 목적 아님)</td>
+          <td>광고 식별자(AAID), 기기·앱 버전 정보, 앱 설치 출처, 이벤트 로그</td>
         </tr>
       </table>
     </div>
     <p style="color:var(--muted);font-size:14px">
       이전되는 국가 : 미국 등 각 수탁자가 운영하는 데이터센터 소재국 · 이전 일시 및 방법 : 서비스 이용 시점에 네트워크를 통해 전송 ·
       이전받는 자의 개인정보 보호책임자 연락처 :
-      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a> ·
-      <a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">AppLovin 개인정보처리방침</a> 참조 ·
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a> 참조 ·
       보유 기간 : 위탁 계약 종료 또는 위 제4항의 보유 기간까지
     </p>
   </section>
 
   <section id="s7">
-    <h2><span class="n">7</span>광고 및 광고 식별자</h2>
+    <h2><span class="n">7</span>광고 미게재 및 광고 식별자</h2>
     <p>
-      본 서비스는 무료 기능 제공을 위해 <b>AppLovin MAX</b>의 광고(배너·네이티브·리워드 광고)를 게재하며,
-      이 과정에서 광고 식별자(AAID) 등이 수집될 수 있습니다.
-      이를 위해 앱은 <code>com.google.android.gms.permission.AD_ID</code> 권한을 선언합니다.
+      <b>본 서비스는 광고를 게재하지 않으며, 제3자 광고 네트워크에 이용자의 정보를 제공하지 않습니다.</b>
+      다만 앱 이용 통계 분석을 위해 <b>Google Analytics for Firebase</b>를 사용하며,
+      이 과정에서 <b>광고 식별자(AAID)</b>가 수집됩니다. 이를 위해 앱은
+      <code>com.google.android.gms.permission.AD_ID</code> 권한을 선언합니다.
     </p>
     <ul>
-      <li>맞춤형 광고를 원하지 않으실 경우 <b>기기 설정 → 개인정보 보호 → 광고</b>에서
-          "광고 ID 삭제" 또는 "광고 개인 최적화 선택 해제"를 설정하실 수 있습니다.</li>
-      <li>리워드 광고 시청은 이용자의 선택이며, 시청하지 않아도 서비스 이용에 제한은 없습니다.</li>
-      <li>본 서비스에는 <b>포인트·재화·기프티콘 등 적립 시스템이 존재하지 않습니다.</b>
-          광고 시청은 해당 무료 기능을 여는 조건일 뿐입니다.</li>
+      <li>수집된 광고 식별자는 <b>이용 통계 분석 목적으로만</b> 처리하며,
+          광고 게재·맞춤형 광고 타겟팅·광고 실적 측정에는 사용하지 않습니다.</li>
+      <li>원하지 않으실 경우 <b>기기 설정 → 개인정보 보호 → 광고</b>에서
+          "광고 ID 삭제" 또는 "광고 개인 최적화 선택 해제"를 설정하실 수 있습니다.
+          설정하시더라도 서비스 이용에는 아무런 제한이 없습니다.</li>
+      <li>본 서비스에는 <b>포인트·재화·기프티콘 등 적립이나 보상 시스템이 존재하지 않습니다.</b></li>
+      <li>무료로 제공되는 기능은 광고 시청 등 어떠한 조건 없이 이용하실 수 있으며,
+          다만 서버 자원 보호를 위한 이용 횟수 한도가 적용됩니다.</li>
     </ul>
   </section>
 
@@ -338,12 +342,23 @@
       <table>
         <tr><th>시행일</th><th>주요 변경 내용</th></tr>
         <tr>
-          <td>2026년 8월 26일<br>(현행)</td>
+          <td>2026년 8월 29일<br>(현행)</td>
           <td>
-            광고 사업자를 <b>Google AdMob</b>에서 <b>AppLovin MAX</b>로 변경<br>
-            이에 따라 제6항 위탁 표의 수탁자와 제7항 광고 고지를 정정하고,
-            국외 이전 안내에 AppLovin 개인정보처리방침 링크를 추가
+            <b>서비스 내 광고를 전면 중단</b>했습니다. 제1항 처리 목적에서 "광고 게재"를,
+            제6항 위탁 표에서 수탁자 <b>AppLovin Corporation</b>과 국외 이전 안내의 관련 링크를 삭제하고,
+            제7항을 광고 미게재 고지로 정정했습니다.<br>
+            아울러 앱 이용 통계 분석을 위해 <b>Google Analytics for Firebase</b>를 도입했습니다.
+            이에 따라 제2항 수집 항목에 <b>앱 설치 출처·이벤트 로그</b>를 추가하고,
+            제6항 위탁 표에 수탁자 <b>Google LLC(Google Analytics for Firebase)</b>를 추가했습니다.
+            <b>광고 식별자(AAID)</b>는 계속 수집되나 <b>이용 통계 분석 목적으로만</b> 사용하며
+            광고 게재·타겟팅에는 사용하지 않습니다.<br>
+            <span style="color:var(--muted);font-size:13px">※ 정식 출시 전 변경으로
+            기존 이용자가 없어 공고일부터 시행합니다.</span>
           </td>
+        </tr>
+        <tr>
+          <td>2026년 8월 26일</td>
+          <td>광고 사업자를 Google AdMob에서 AppLovin MAX로 변경</td>
         </tr>
         <tr>
           <td>2026년 8월 17일</td>
@@ -363,7 +378,7 @@
 <footer>
   창업메이트(StartMate) · 에스와이파크(SYPark) · 대표 박상윤 · 사업자등록번호 733-49-01262<br>
   문의 <a href="mailto:starmotor.dev@gmail.com">starmotor.dev@gmail.com</a><br>
-  시행일자 2026년 8월 26일 (최초 시행 2026년 7월 26일)
+  시행일자 2026년 8월 29일 (최초 시행 2026년 7월 26일)
 </footer>
 
 </body>
