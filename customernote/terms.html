@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이용약관 — 고객관리 수첩</title>
+<style>
+  :root{
+    --bg:#f5f7fa; --card:#ffffff; --text:#191f28; --muted:#5d6878; --line:#e5e8eb;
+    --brand:#3182f6; --brand2:#1b64da; --soft:#e8f3ff; --warn-bg:#fff7ed; --warn-line:#fdba74;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b0f17; --card:#141a24; --text:#e9edf3; --muted:#9aa5b4; --line:#252d3a;
+      --brand:#5a9dff; --brand2:#3182f6; --soft:#16233a; --warn-bg:#2a1f14; --warn-line:#a16207;
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);line-height:1.75;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Malgun Gothic",sans-serif;
+    -webkit-text-size-adjust:100%}
+
+  .hero{background:linear-gradient(135deg,#1b64da 0%,#3182f6 55%,#4fa3ff 100%);color:#fff;
+    padding:56px 24px 64px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;top:-120px;right:-60px;width:360px;height:360px;
+    background:radial-gradient(circle,rgba(255,255,255,.22),transparent 65%)}
+  .hero-in{max-width:820px;margin:0 auto;position:relative;z-index:1}
+  .brand{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:14px;
+    letter-spacing:.4px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+    padding:7px 14px;border-radius:99px}
+  .hero h1{font-size:34px;font-weight:800;letter-spacing:-.8px;margin-top:20px;line-height:1.25}
+  .hero .date{margin-top:12px;font-size:14px;color:rgba(255,255,255,.85)}
+  .tabs{display:flex;gap:8px;margin-top:26px;flex-wrap:wrap}
+  .tabs a{font-size:14px;font-weight:600;text-decoration:none;padding:9px 16px;border-radius:11px;
+    background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.22);transition:.15s}
+  .tabs a:hover{background:rgba(255,255,255,.24)}
+  .tabs a[aria-current]{background:#fff;color:#1b64da;border-color:#fff}
+
+  main{max-width:820px;margin:-32px auto 0;padding:0 24px 80px;position:relative;z-index:2}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px 30px;
+    box-shadow:0 10px 40px rgba(20,30,60,.06)}
+  @media (max-width:600px){ .card{padding:26px 20px} .hero h1{font-size:26px} }
+
+  .lead{font-size:15.5px;color:var(--muted)}
+  .toc{margin:26px 0 8px;display:flex;flex-wrap:wrap;gap:7px}
+  .toc a{font-size:13px;text-decoration:none;color:var(--brand);background:var(--soft);
+    border-radius:8px;padding:6px 11px;border:1px solid transparent}
+  .toc a:hover{border-color:var(--brand)}
+
+  section{margin-top:38px;scroll-margin-top:20px}
+  h2{font-size:18.5px;font-weight:800;letter-spacing:-.3px;display:flex;align-items:baseline;gap:10px}
+  h2 .n{flex:0 0 auto;font-size:12.5px;font-weight:800;color:var(--brand);background:var(--soft);
+    padding:4px 10px;border-radius:8px;letter-spacing:.3px}
+  section > p, section > ul, section > ol, section > .note, section > .warn, section > .tbl{margin-top:13px}
+  p{font-size:15px}
+  ul,ol{padding-left:20px}
+  li{font-size:15px;margin-bottom:7px}
+  b,strong{font-weight:700}
+  code{background:var(--soft);padding:2px 6px;border-radius:6px;font-size:13.5px}
+
+  .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;min-width:480px;font-size:14px}
+  th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top}
+  th{background:var(--soft);font-weight:700;white-space:nowrap}
+
+  .note{background:var(--soft);border-left:3px solid var(--brand);border-radius:0 12px 12px 0;
+    padding:15px 18px;font-size:14.5px}
+  .note b{color:var(--brand)}
+  .warn{background:var(--warn-bg);border-left:3px solid var(--warn-line);border-radius:0 12px 12px 0;
+    padding:15px 18px;font-size:14.5px}
+
+  footer{max-width:820px;margin:0 auto;padding:0 24px 60px;color:var(--muted);font-size:13.5px}
+  footer a{color:var(--brand)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-in">
+    <span class="brand">✦ 고객관리 수첩</span>
+    <h1>이용약관</h1>
+    <div class="date">시행일자 : 2026년 9월 19일</div>
+    <nav class="tabs">
+      <a href="privacy.html">개인정보처리방침</a>
+      <a href="terms.html" aria-current="page">이용약관</a>
+      <a href="delete-account.html">계정 삭제</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="card">
+
+  <p class="lead">
+    본 약관은 에스와이파크(대표 박상윤, 이하 "운영자")가 제공하는 모바일 애플리케이션
+    <b>고객관리 수첩</b>(패키지명 <code>com.sypark.customernote</code>, 이하 "서비스")의 이용 조건과 절차,
+    운영자와 이용자의 권리·의무 및 책임 사항을 정합니다.
+  </p>
+
+  <div class="toc">
+    <a href="#a1">1. 목적</a><a href="#a2">2. 정의</a><a href="#a3">3. 약관의 효력</a>
+    <a href="#a4">4. 이용 자격</a><a href="#a5">5. 서비스 내용</a><a href="#a6">6. 요금제·한도</a>
+    <a href="#a7">7. 구독·결제</a><a href="#a8">8. 청약철회·환불</a><a href="#a9">9. 해지·요금제 변경</a>
+    <a href="#a10">10. 이용자 의무</a><a href="#a11">11. 데이터와 백업</a><a href="#a12">12. 지식재산권</a>
+    <a href="#a13">13. 광고 미게재</a><a href="#a14">14. 서비스 변경·종료</a><a href="#a15">15. 면책</a>
+    <a href="#a16">16. 개인정보</a><a href="#a17">17. 분쟁 해결</a><a href="#a18">18. 사업자 정보</a>
+  </div>
+
+  <section id="a1">
+    <h2><span class="n">제1조</span>목적</h2>
+    <p>본 약관은 이용자가 서비스를 이용함에 있어 운영자와 이용자 간의 권리·의무 및 책임 사항, 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
+  </section>
+
+  <section id="a2">
+    <h2><span class="n">제2조</span>정의</h2>
+    <ul>
+      <li><b>"서비스"</b>란 이용자가 자신의 고객·거래·활동 기록·일정을 기록하고 관리하며 여러 기기에서 동기화할 수 있도록
+          운영자가 제공하는 고객관리 수첩 앱 및 관련 서비스 일체를 말합니다.</li>
+      <li><b>"이용자"</b>란 본 약관에 동의하고 서비스를 이용하는 자를 말합니다.</li>
+      <li><b>"무료 요금제"</b>와 <b>"Pro"</b>란 제6조에 정한 서비스 이용 범위를 말하며,
+          Pro는 Google Play를 통해 판매되는 <b>자동 갱신 구독 상품</b>입니다.</li>
+      <li><b>"콘텐츠"</b>란 이용자가 서비스에 입력하거나 가져온 고객 정보·거래·활동 기록·일정 등 일체의 데이터를 말합니다.</li>
+    </ul>
+  </section>
+
+  <section id="a3">
+    <h2><span class="n">제3조</span>약관의 효력 및 변경</h2>
+    <ul>
+      <li>본 약관은 서비스 화면 또는 본 페이지에 게시함으로써 효력이 발생합니다.</li>
+      <li>운영자는 관련 법령을 위반하지 않는 범위에서 약관을 변경할 수 있으며, 변경 시 시행 7일 전
+          (이용자에게 불리한 중대한 변경은 30일 전) 앱 내 공지 또는 본 페이지를 통해 알립니다.</li>
+      <li>이용자가 변경된 약관에 동의하지 않는 경우 서비스 이용을 중단하고 탈퇴할 수 있습니다.
+          공지된 시행일 이후에도 서비스를 계속 이용하는 경우 변경에 동의한 것으로 봅니다.</li>
+    </ul>
+  </section>
+
+  <section id="a4">
+    <h2><span class="n">제4조</span>이용 자격 및 계정</h2>
+    <ul>
+      <li>서비스는 만 14세 이상인 자가 이용할 수 있습니다.</li>
+      <li>이용자는 이메일 또는 Google 계정으로 회원가입 후 서비스를 이용합니다.</li>
+      <li>미성년자가 유료 구독을 하는 경우 법정대리인의 동의가 필요하며, 동의 없이 이루어진 결제는
+          본인 또는 법정대리인이 취소할 수 있습니다.</li>
+      <li>계정은 본인만 이용할 수 있으며 타인에게 양도·대여할 수 없습니다.</li>
+    </ul>
+  </section>
+
+  <section id="a5">
+    <h2><span class="n">제5조</span>서비스의 내용</h2>
+    <ul>
+      <li>고객 관리 : 고객 등록·수정·삭제, 검색, 기기 연락처에서 가져오기, 전화·문자·이메일·길찾기 연결</li>
+      <li>활동 기록 : 통화·미팅·문자·이메일·메모 기록과 후속 조치</li>
+      <li>일정 : 미팅·할 일·후속 연락 일정과 기기 알림</li>
+      <li>파이프라인 : 거래 등록, 단계 이동, 성사·실패 관리</li>
+      <li>대시보드 : 성사 금액, 진행 중 거래, 신규 고객, 단계별 거래 등 실적 요약</li>
+      <li>동기화 : 인터넷이 연결되면 서버에 저장하고 같은 계정의 다른 기기와 맞춤(오프라인에서도 기록 가능)</li>
+      <li>보안 : 앱 잠금(PIN·지문·얼굴)</li>
+    </ul>
+    <p>운영자는 서비스의 구성·기능을 개선할 수 있으며, Pro로 제공하던 기능의 범위를 축소하는 경우 사전에 공지합니다.</p>
+  </section>
+
+  <section id="a6">
+    <h2><span class="n">제6조</span>요금제와 이용 한도</h2>
+    <div class="tbl">
+      <table>
+        <tr><th>구분</th><th>무료 요금제</th><th>Pro</th></tr>
+        <tr><td>요금</td><td>무료</td><td>월 9,900원 또는 연 99,000원 (자동 갱신)</td></tr>
+        <tr><td>고객</td><td>50명까지</td><td>제한 없음</td></tr>
+        <tr><td>진행 중 거래</td><td>10건까지</td><td>제한 없음</td></tr>
+        <tr><td>사용 기기</td><td>1대</td><td>3대</td></tr>
+        <tr><td>대시보드 기간</td><td>이번 달</td><td>이번 주·이번 달·이번 분기</td></tr>
+      </table>
+    </div>
+    <ul>
+      <li>요금은 Google Play 스토어에 표시된 금액을 기준으로 하며, 부가가치세가 포함되어 있습니다.</li>
+      <li>한도를 넘는 새 등록은 앱과 서버 모두에서 제한되며, 이미 저장한 데이터는 한도와 관계없이 조회·수정할 수 있습니다.</li>
+      <li>무료 요금제에서 다른 기기로 로그인하면, 이용자가 "이 기기에서 사용"을 선택한 경우 기존 기기는 다음 동기화 때
+          로그아웃됩니다. 이때 기존 기기에서 저장한 내용은 먼저 서버에 올라갑니다.</li>
+    </ul>
+  </section>
+
+  <section id="a7">
+    <h2><span class="n">제7조</span>구독과 결제</h2>
+    <ul>
+      <li>Pro 구독은 <b>Google Play 인앱 결제</b>로만 이루어지며, 결제 수단 정보는 Google이 처리하고 운영자는 이를 보관하지 않습니다.</li>
+      <li><b>무료 체험</b> : 처음 구독하는 이용자에게 14일 무료 체험을 제공할 수 있습니다.
+          체험 기간 중 해지하지 않으면 <b>체험이 끝나는 날 선택한 요금이 결제</b>되고 구독이 시작됩니다.
+          무료 체험은 Google Play 기준으로 한 번만 제공됩니다.</li>
+      <li><b>자동 갱신</b> : 구독은 해지할 때까지 월 또는 연 단위로 자동 갱신되며, 갱신일에 Google Play에 등록된 결제 수단으로 결제됩니다.</li>
+      <li>결제는 Google Play 서버 검증을 통과한 경우에만 Pro가 적용됩니다. 결제가 완료됐는데 적용이 늦어지는 경우
+          앱을 다시 열거나 <b>더보기 → 구독 → 구매 복원</b>을 누르면 다시 확인합니다.</li>
+      <li>갱신 결제가 실패하면 Google Play가 정한 유예 기간 동안 Pro를 계속 이용할 수 있으며, 그 뒤에도 결제되지 않으면
+          구독이 보류되어 무료 요금제로 전환됩니다(데이터는 유지).</li>
+      <li>운영자가 구독 가격을 올리는 경우 Google Play 정책에 따라 사전에 알리고 필요한 경우 이용자의 동의를 받습니다.</li>
+    </ul>
+  </section>
+
+  <section id="a8">
+    <h2><span class="n">제8조</span>청약철회 및 환불</h2>
+    <ul>
+      <li>결제일로부터 <b>7일 이내</b>에는 청약철회(환불)를 요청할 수 있습니다. 다만 결제 후 Pro 기능을 이용한 경우
+          「전자상거래 등에서의 소비자보호에 관한 법률」 제17조 제2항에 따라 청약철회가 제한될 수 있으며,
+          이 경우에도 이용하지 않은 기간에 대해서는 관련 법령과 Google Play 정책에 따라 처리합니다.</li>
+      <li>무료 체험 기간 중 해지하면 요금이 청구되지 않습니다.</li>
+      <li>구독 기간 중 해지하면 <b>이미 결제한 기간이 끝날 때까지 Pro를 이용</b>할 수 있으며, 남은 기간에 대한 부분 환불은 하지 않습니다.
+          (위 7일 이내 청약철회와 운영자 귀책 사유는 예외)</li>
+      <li>환불 요청은 Google Play(구독 → 해당 구독 → 환불 요청) 또는 아래 문의처로 할 수 있으며,
+          실제 환불 절차와 기간은 Google Play의 정책을 따릅니다.</li>
+      <li>서비스 장애 등 운영자의 귀책 사유로 Pro를 이용하지 못한 경우 그 기간에 해당하는 금액을 환불하거나 이용 기간을 연장합니다.</li>
+    </ul>
+    <div class="note">
+      구독·환불 문의 : <a href="mailto:starmotor.dev@gmail.com">starmotor.dev@gmail.com</a>
+      (Google Play 주문 번호와 가입 이메일을 함께 보내주시면 빠르게 확인할 수 있습니다.)
+    </div>
+  </section>
+
+  <section id="a9">
+    <h2><span class="n">제9조</span>해지와 요금제 변경</h2>
+    <ul>
+      <li>구독 해지와 월간·연간 요금제 변경은 <b>Google Play 스토어 → 결제 및 정기 결제 → 정기 결제</b>에서 할 수 있으며,
+          앱의 <b>더보기 → 구독 → Play 스토어에서 구독 관리</b>로 바로 이동할 수 있습니다.</li>
+      <li><b>앱을 삭제하거나 회원 탈퇴를 해도 구독은 자동으로 해지되지 않습니다.</b> 반드시 Google Play에서 해지해 주세요.</li>
+      <li>구독이 끝나 무료 요금제로 바뀌어도 <b>데이터는 삭제되지 않습니다.</b> 다만 제6조 한도를 넘는 새 등록이 제한되고,
+          사용 기기가 1대를 넘으면 가장 최근에 사용한 기기 1대를 제외한 기기는 로그아웃됩니다.</li>
+    </ul>
+  </section>
+
+  <section id="a10">
+    <h2><span class="n">제10조</span>이용자의 의무</h2>
+    <p>이용자는 다음 사항을 지켜야 합니다.</p>
+    <ul>
+      <li>서비스에 고객의 개인정보를 입력하거나 기기 연락처에서 가져오는 경우, 이용자는 그 개인정보를
+          <b>「개인정보 보호법」 등 관련 법령에 따라 적법하게 수집·이용</b>해야 하며, 이에 대한 책임은 이용자에게 있습니다.</li>
+      <li>타인의 계정을 도용하거나 개인정보를 무단으로 수집·이용하지 않아야 합니다.</li>
+      <li>자동화된 수단(봇·스크립트 등)으로 서비스에 접근하거나 대량 요청을 발생시키지 않아야 합니다.</li>
+      <li>서비스를 역설계하거나 API·인증 정보를 무단으로 추출·이용하지 않아야 합니다.</li>
+      <li>결제·요금제 제한을 우회하는 행위를 하지 않아야 합니다.</li>
+      <li>불법 정보의 저장이나 법령을 위반하는 목적으로 서비스를 이용하지 않아야 합니다.</li>
+    </ul>
+    <p>위반이 확인된 경우 운영자는 사전 통보 없이 이용을 제한하거나 계정을 해지할 수 있습니다.</p>
+  </section>
+
+  <section id="a11">
+    <h2><span class="n">제11조</span>데이터의 저장과 백업</h2>
+    <ul>
+      <li>콘텐츠는 이용자의 기기(암호화된 저장소)와 운영자의 서버에 저장되며, 인터넷이 연결되면 동기화됩니다.
+          <b>동기화되기 전에 앱을 삭제하거나 로그아웃하면 서버에 올라가지 않은 변경은 사라질 수 있습니다.</b></li>
+      <li>여러 기기에서 같은 항목을 동시에 수정한 경우 나중에 저장된 값이 남으며, 앱은 덮어써진 이전 값을 확인할 수 있게 알려 줍니다.</li>
+      <li>이용자가 삭제한 고객은 휴지통에 30일 동안 보관된 뒤 완전히 삭제됩니다.</li>
+      <li>운영자는 장애 복구를 위해 서버 데이터를 매일 백업하고 최대 30일간 보관합니다.
+          다만 이용자 개인의 실수로 삭제한 데이터를 개별로 되살려 드리는 것은 보장하지 않습니다.</li>
+    </ul>
+  </section>
+
+  <section id="a12">
+    <h2><span class="n">제12조</span>지식재산권</h2>
+    <ul>
+      <li>이용자가 입력한 콘텐츠에 대한 권리는 이용자에게 있으며, 운영자는 서비스 제공(저장·동기화·백업) 외의 목적으로 이를 이용하지 않습니다.</li>
+      <li>서비스의 화면 구성, 디자인, 프로그램 등 서비스 자체에 대한 권리는 운영자에게 귀속됩니다.</li>
+    </ul>
+  </section>
+
+  <section id="a13">
+    <h2><span class="n">제13조</span>광고 미게재</h2>
+    <ul>
+      <li>운영자는 서비스 내에 <b>광고를 게재하지 않습니다.</b></li>
+      <li>운영자가 향후 광고를 도입하는 경우 제3조에 따라 사전에 공지하고 약관을 개정합니다.</li>
+    </ul>
+  </section>
+
+  <section id="a14">
+    <h2><span class="n">제14조</span>서비스의 변경 및 종료</h2>
+    <ul>
+      <li>운영자는 시스템 점검·장애, 천재지변 등 불가피한 사유가 있는 경우 서비스 제공을 일시 중단할 수 있습니다.
+          이 경우에도 기기에 저장된 데이터로 앱을 계속 이용할 수 있으며, 연결이 복구되면 동기화됩니다.</li>
+      <li>서비스를 종료하는 경우 <b>30일 전에 앱 내 공지</b>하며, 이용자가 콘텐츠를 옮겨 둘 수 있도록 안내합니다.
+          남은 구독 기간에 해당하는 금액은 환불합니다.</li>
+      <li>이용자는 언제든지 앱 <b>더보기 → 회원 탈퇴</b>로 이용계약을 해지할 수 있습니다.
+          탈퇴 시 콘텐츠는 모두 삭제되며 복구할 수 없습니다.</li>
+    </ul>
+  </section>
+
+  <section id="a15">
+    <h2><span class="n">제15조</span>운영자의 면책</h2>
+    <ul>
+      <li>운영자는 천재지변, 통신망 장애, 제3자 서비스(Google, Supabase 등)의 장애 등 불가항력으로 인한 손해에 대해 책임을 지지 않습니다.</li>
+      <li>이용자의 귀책 사유(기기 분실, PIN·비밀번호 관리 소홀, 동기화 전 앱 삭제 등)로 발생한 손해에 대해 책임을 지지 않습니다.</li>
+      <li>일정 알림은 기기의 절전 설정·권한 설정에 따라 늦거나 표시되지 않을 수 있으며, 이로 인한 손해에 대해 책임을 지지 않습니다.</li>
+      <li>이용자가 입력한 고객 정보의 적법성과 정확성에 대해 책임을 지지 않습니다.</li>
+      <li>운영자의 고의 또는 중대한 과실이 있는 경우에는 그러하지 아니합니다.</li>
+    </ul>
+  </section>
+
+  <section id="a16">
+    <h2><span class="n">제16조</span>개인정보의 보호</h2>
+    <p>
+      운영자는 이용자의 개인정보를 관련 법령에 따라 보호하며, 구체적인 내용은
+      <a href="privacy.html">개인정보처리방침</a>에 따릅니다.
+    </p>
+  </section>
+
+  <section id="a17">
+    <h2><span class="n">제17조</span>준거법 및 분쟁 해결</h2>
+    <ul>
+      <li>본 약관은 대한민국 법령에 따라 해석됩니다.</li>
+      <li>서비스 이용과 관련하여 분쟁이 발생한 경우 운영자와 이용자는 성실히 협의하여 해결하며,
+          협의가 이루어지지 않을 경우 관할 법원은 민사소송법에 따릅니다.</li>
+    </ul>
+  </section>
+
+  <section id="a18">
+    <h2><span class="n">제18조</span>사업자 정보 및 문의처</h2>
+    <ul>
+      <li><b>상호</b> : 에스와이파크 (SYPark)</li>
+      <li><b>대표자</b> : 박상윤</li>
+      <li><b>사업자등록번호</b> : 733-49-01262</li>
+      <li><b>이메일</b> : <a href="mailto:starmotor.dev@gmail.com">starmotor.dev@gmail.com</a></li>
+    </ul>
+    <p style="color:var(--muted);font-size:14px">
+      운영자는 「부가가치세법」에 따른 간이과세자로서, 「전자상거래 등에서의 소비자보호에 관한 법률」
+      및 같은 법 시행령에 따라 <b>통신판매업 신고 의무가 면제되는 사업자</b>입니다.
+    </p>
+    <p style="color:var(--muted);font-size:14px">
+      구독·환불에 관한 문의는 위 이메일로 보내 주시면 확인 후 답변드립니다.
+      Google Play를 통한 결제이므로 Google Play 고객센터에서도 도움을 받으실 수 있습니다.
+    </p>
+  </section>
+
+  <section id="add">
+    <h2><span class="n">부칙</span></h2>
+    <p>본 약관은 2026년 9월 19일부터 시행합니다.</p>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  고객관리 수첩 · 에스와이파크(SYPark) · 대표 박상윤 · 사업자등록번호 733-49-01262<br>
+  문의 <a href="mailto:starmotor.dev@gmail.com">starmotor.dev@gmail.com</a><br>
+  시행일자 2026년 9월 19일
+</footer>
+
+</body>
+</html>

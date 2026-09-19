@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>개인정보처리방침 — 고객관리 수첩</title>
+<style>
+  :root{
+    --bg:#f5f7fa; --card:#ffffff; --text:#191f28; --muted:#5d6878; --line:#e5e8eb;
+    --brand:#3182f6; --brand2:#1b64da; --soft:#e8f3ff; --warn-bg:#fff7ed; --warn-line:#fdba74;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b0f17; --card:#141a24; --text:#e9edf3; --muted:#9aa5b4; --line:#252d3a;
+      --brand:#5a9dff; --brand2:#3182f6; --soft:#16233a; --warn-bg:#2a1f14; --warn-line:#a16207;
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);line-height:1.75;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Malgun Gothic",sans-serif;
+    -webkit-text-size-adjust:100%}
+
+  .hero{background:linear-gradient(135deg,#1b64da 0%,#3182f6 55%,#4fa3ff 100%);color:#fff;
+    padding:56px 24px 64px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;top:-120px;right:-60px;width:360px;height:360px;
+    background:radial-gradient(circle,rgba(255,255,255,.22),transparent 65%)}
+  .hero-in{max-width:820px;margin:0 auto;position:relative;z-index:1}
+  .brand{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:14px;
+    letter-spacing:.4px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+    padding:7px 14px;border-radius:99px}
+  .hero h1{font-size:34px;font-weight:800;letter-spacing:-.8px;margin-top:20px;line-height:1.25}
+  .hero .date{margin-top:12px;font-size:14px;color:rgba(255,255,255,.85)}
+  .tabs{display:flex;gap:8px;margin-top:26px;flex-wrap:wrap}
+  .tabs a{font-size:14px;font-weight:600;text-decoration:none;padding:9px 16px;border-radius:11px;
+    background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.22);transition:.15s}
+  .tabs a:hover{background:rgba(255,255,255,.24)}
+  .tabs a[aria-current]{background:#fff;color:#1b64da;border-color:#fff}
+
+  main{max-width:820px;margin:-32px auto 0;padding:0 24px 80px;position:relative;z-index:2}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px 30px;
+    box-shadow:0 10px 40px rgba(20,30,60,.06)}
+  @media (max-width:600px){ .card{padding:26px 20px} .hero h1{font-size:26px} }
+
+  .lead{font-size:15.5px;color:var(--muted)}
+  .toc{margin:26px 0 8px;display:flex;flex-wrap:wrap;gap:7px}
+  .toc a{font-size:13px;text-decoration:none;color:var(--brand);background:var(--soft);
+    border-radius:8px;padding:6px 11px;border:1px solid transparent}
+  .toc a:hover{border-color:var(--brand)}
+
+  section{margin-top:40px;scroll-margin-top:20px}
+  h2{font-size:19px;font-weight:800;letter-spacing:-.3px;display:flex;align-items:center;gap:11px}
+  h2 .n{flex:0 0 auto;width:28px;height:28px;border-radius:9px;font-size:13px;
+    background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800}
+  section > p, section > ul, section > .note, section > .warn, section > table, section > .tbl{margin-top:14px}
+  p{font-size:15px}
+  ul{padding-left:20px}
+  li{font-size:15px;margin-bottom:7px}
+  b,strong{font-weight:700}
+  code{background:var(--soft);padding:2px 6px;border-radius:6px;font-size:13.5px}
+
+  .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+  th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top}
+  th{background:var(--soft);font-weight:700;white-space:nowrap}
+
+  .note{background:var(--soft);border-left:3px solid var(--brand);border-radius:0 12px 12px 0;
+    padding:15px 18px;font-size:14.5px;color:var(--text)}
+  .note b{color:var(--brand)}
+  .warn{background:var(--warn-bg);border-left:3px solid var(--warn-line);border-radius:0 12px 12px 0;
+    padding:15px 18px;font-size:14.5px}
+
+  footer{max-width:820px;margin:0 auto;padding:0 24px 60px;color:var(--muted);font-size:13.5px}
+  footer a{color:var(--brand)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-in">
+    <span class="brand">✦ 고객관리 수첩</span>
+    <h1>개인정보처리방침</h1>
+    <div class="date">시행일자 : 2026년 9월 19일</div>
+    <nav class="tabs">
+      <a href="privacy.html" aria-current="page">개인정보처리방침</a>
+      <a href="terms.html">이용약관</a>
+      <a href="delete-account.html">계정 삭제</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="card">
+
+  <p class="lead">
+    에스와이파크(대표 박상윤, 이하 "운영자")는 「개인정보 보호법」 및 관련 법령에 따라 이용자의 개인정보를 보호하고,
+    이와 관련한 고충을 신속하게 처리하기 위해 다음과 같이 개인정보처리방침을 수립·공개합니다.
+    본 방침은 모바일 애플리케이션 <b>고객관리 수첩</b>(패키지명 <code>com.sypark.customernote</code>)에 적용됩니다.
+  </p>
+
+  <div class="toc">
+    <a href="#s1">1. 처리 목적</a>
+    <a href="#s2">2. 수집 항목</a>
+    <a href="#s3">3. 이용자가 입력한 고객 정보</a>
+    <a href="#s4">4. 권한</a>
+    <a href="#s5">5. 보유 기간</a>
+    <a href="#s6">6. 제3자 제공</a>
+    <a href="#s7">7. 처리 위탁·국외이전</a>
+    <a href="#s8">8. 광고 미게재</a>
+    <a href="#s9">9. 이용자 권리</a>
+    <a href="#s10">10. 파기</a>
+    <a href="#s11">11. 안전성 확보</a>
+    <a href="#s12">12. 아동</a>
+    <a href="#s13">13. 책임자·문의</a>
+    <a href="#s14">14. 변경 고지</a>
+  </div>
+
+  <section id="s1">
+    <h2><span class="n">1</span>개인정보의 처리 목적</h2>
+    <p>운영자는 다음 목적으로만 개인정보를 처리하며, 목적이 변경될 경우 사전에 동의를 받습니다.</p>
+    <ul>
+      <li>회원 가입·로그인·본인 확인·계정 관리, 비밀번호 재설정</li>
+      <li>이용자가 입력한 고객·거래·활동 기록·일정 데이터의 저장, 기기 간 동기화 및 백업</li>
+      <li>일정·후속 조치 알림 제공(기기 안에서 예약)</li>
+      <li>Pro 구독 결제 처리, 구매 검증, 구독 상태 관리, 요금제별 이용 한도 적용</li>
+      <li>요금제별 사용 기기 수 관리(기기 전환 시 다른 기기 로그아웃)</li>
+      <li>해지 사유 설문을 통한 서비스 개선</li>
+      <li>앱 오류 진단 및 안정성 개선</li>
+    </ul>
+  </section>
+
+  <section id="s2">
+    <h2><span class="n">2</span>처리하는 개인정보 항목</h2>
+    <div class="tbl">
+      <table>
+        <tr><th>구분</th><th>항목</th><th>수집 시점</th></tr>
+        <tr>
+          <td>계정 정보<br><b>(필수)</b></td>
+          <td>이메일 주소, 비밀번호(암호화된 형태로만 저장), 이름<br>
+              Google 로그인 시 : Google 계정 식별자, 이메일 주소, 이름, 프로필 사진 URL</td>
+          <td>회원가입·로그인</td>
+        </tr>
+        <tr>
+          <td>설정 정보</td>
+          <td>업종(선택), 일정 기본 알림 시간, 할 일 기본 알림 시각</td>
+          <td>설정 시 이용자가 직접 입력</td>
+        </tr>
+        <tr>
+          <td>이용자가 입력한<br>업무 데이터</td>
+          <td>고객(이름, 전화번호, 이메일, 주소, 회사, 직함, 태그, 메모), 회사 정보,
+              거래(제목, 금액, 단계, 예상 마감일, 성사·실패 사유, 메모),
+              활동 기록(통화·미팅·문자 등 기록과 메모), 일정·할 일(제목, 일시, 장소, 메모)</td>
+          <td>이용자가 직접 입력하거나 기기 연락처에서 골라 가져올 때</td>
+        </tr>
+        <tr>
+          <td>결제 정보</td>
+          <td>구독 상품·요금제 ID, Google Play 구매 토큰, 구독 상태·만료일·자동 갱신 여부, 주문 번호 등 Google Play가 알려 주는 구독 정보
+              <br><span style="color:var(--muted);font-size:13px">※ 카드번호 등 결제수단 정보는 Google Play가 처리하며 운영자는 받지도 보관하지도 않습니다.</span></td>
+          <td>Pro 구독 시, 구독 상태가 바뀔 때</td>
+        </tr>
+        <tr>
+          <td>기기 정보</td>
+          <td>기기 식별값(로그인할 때마다 앱이 새로 만드는 임의의 값), 기기 모델명, 앱 버전, 마지막 동기화 시각</td>
+          <td>로그인·동기화 시</td>
+        </tr>
+        <tr>
+          <td>해지 설문<br>(선택)</td>
+          <td>해지 사유(가격, 기능 부족 등), 추가 의견</td>
+          <td>구독 해지 후 이용자가 응답한 경우</td>
+        </tr>
+        <tr>
+          <td>자동 수집</td>
+          <td>앱 오류 발생 시 오류 내용, 기기 모델·OS 버전·앱 버전, 앱 설치별 임의 식별값(Firebase Crashlytics)</td>
+          <td>앱 오류 발생 시</td>
+        </tr>
+      </table>
+    </div>
+    <div class="note">
+      <b>수집하지 않는 정보</b> — 본 앱은 위치 정보, 통화 기록, 문자 내용, 사진·미디어, 광고 식별자(AAID),
+      주민등록번호 등 민감정보·고유식별정보를 수집하지 않습니다.
+      "통화 후 기록" 기능은 앱에서 전화 걸기를 누른 뒤 앱으로 돌아온 시점만 보고 기록 창을 띄우며,
+      기기의 통화 기록을 읽지 않습니다.
+    </div>
+  </section>
+
+  <section id="s3">
+    <h2><span class="n">3</span>이용자가 입력한 고객 정보에 관한 안내</h2>
+    <p>
+      본 앱은 이용자가 자신의 고객을 관리하기 위한 도구입니다. 이용자가 입력하거나 기기 연락처에서 가져온
+      <b>고객의 개인정보는 이용자가 수집·관리하는 정보</b>이며, 운영자는 이용자를 대신해 이를 저장·동기화하는
+      역할만 합니다.
+    </p>
+    <ul>
+      <li>운영자는 이용자의 고객 정보를 열람·분석하거나 다른 목적으로 이용하지 않으며, 광고·마케팅에 사용하지 않습니다.</li>
+      <li>고객 정보는 해당 이용자의 계정에서만 조회할 수 있도록 서버에서 접근을 제한합니다.</li>
+      <li>이용자는 고객 정보를 입력할 때 「개인정보 보호법」 등 관련 법령에 따라 필요한 동의를 받는 등
+          적법하게 수집·이용해야 합니다. (이용약관 제10조)</li>
+    </ul>
+  </section>
+
+  <section id="s4">
+    <h2><span class="n">4</span>앱 접근 권한</h2>
+    <div class="tbl">
+      <table>
+        <tr><th>권한</th><th>용도</th><th>구분</th></tr>
+        <tr><td>연락처</td><td>기기 연락처에서 고객을 골라 가져오기. 이용자가 고른 사람만 저장하며, 나머지 연락처는 서버로 보내지 않습니다.</td><td>선택</td></tr>
+        <tr><td>알림</td><td>일정·후속 조치 알림 표시</td><td>선택</td></tr>
+        <tr><td>정확한 알람</td><td>알림을 정해진 시각에 맞춰 울리기</td><td>선택</td></tr>
+        <tr><td>생체 인증</td><td>앱 잠금을 지문·얼굴로 풀기(인증은 기기가 처리하며 생체 정보는 앱이 받지 않습니다)</td><td>선택</td></tr>
+        <tr><td>인터넷·네트워크 상태</td><td>서버 동기화, 오프라인 여부 표시</td><td>필수</td></tr>
+        <tr><td>부팅 완료 알림 수신</td><td>기기를 다시 켠 뒤 예약된 알림을 다시 등록</td><td>필수</td></tr>
+      </table>
+    </div>
+    <p style="color:var(--muted);font-size:14px">선택 권한은 허용하지 않아도 해당 기능 외의 서비스는 이용할 수 있습니다.</p>
+  </section>
+
+  <section id="s5">
+    <h2><span class="n">5</span>개인정보의 보유 및 이용 기간</h2>
+    <ul>
+      <li><b>계정·설정·업무 데이터·기기·결제 사본·해지 설문</b> : 회원 탈퇴 시 즉시 삭제</li>
+      <li><b>이용자가 삭제한 고객 등(휴지통)</b> : 삭제 후 30일이 지나면 서버에서 완전히 삭제</li>
+      <li><b>서버 백업본</b> : 장애 복구를 위해 매일 만드는 백업은 최대 30일 보관 후 삭제되므로,
+          탈퇴·삭제한 데이터도 <b>최대 30일 동안</b> 백업본에 남을 수 있습니다. 백업본은 장애 복구 외에는 쓰지 않습니다.</li>
+      <li><b>이용자 기기에 저장된 데이터</b> : 로그아웃하거나 탈퇴하면 즉시 삭제</li>
+      <li><b>오류 로그(Crashlytics)</b> : 수집일로부터 90일</li>
+    </ul>
+    <p>또한 다음 법령에 따라 보존이 필요한 경우 해당 기간 동안 보관합니다.</p>
+    <ul>
+      <li>대금 결제 및 재화 등의 공급에 관한 기록 : 5년 (전자상거래 등에서의 소비자보호에 관한 법률)</li>
+      <li>계약 또는 청약철회 등에 관한 기록 : 5년 (동법)</li>
+      <li>소비자의 불만 또는 분쟁 처리에 관한 기록 : 3년 (동법)</li>
+      <li>서비스 접속 기록 : 3개월 (통신비밀보호법)</li>
+    </ul>
+    <div class="note">
+      <b>법정 보존 기록의 보관 위치</b> — 구독 결제는 전액 Google Play를 통해 이루어지며,
+      위 결제·청약철회·분쟁 기록은 <b>Google Play(판매자 계정)에 보관</b>됩니다. 운영자 서버의
+      구독 정보 사본은 회원 탈퇴 시 즉시 삭제하며, 법정 보존 기간 동안에는 Google Play에 남은 기록으로 갈음합니다.
+    </div>
+  </section>
+
+  <section id="s6">
+    <h2><span class="n">6</span>개인정보의 제3자 제공</h2>
+    <p>
+      운영자는 이용자의 개인정보(이용자가 입력한 고객 정보 포함)를 제3자에게 제공하지 않습니다.
+      다만 이용자가 사전에 동의한 경우 또는 법령에 근거하여 수사기관 등이 적법한 절차로 요구하는 경우는 예외로 합니다.
+    </p>
+  </section>
+
+  <section id="s7">
+    <h2><span class="n">7</span>개인정보 처리의 위탁 및 국외 이전</h2>
+    <p>운영자는 서비스 제공을 위해 아래와 같이 개인정보 처리를 위탁하고 있습니다.</p>
+    <div class="tbl">
+      <table>
+        <tr><th>수탁자</th><th>위탁 업무</th><th>이전 항목</th><th>보관 위치</th></tr>
+        <tr>
+          <td>Supabase, Inc.</td>
+          <td>회원 인증, 데이터 저장·동기화, 서버 연산(구매 검증·회원 탈퇴 처리), 비밀번호 재설정 메일 발송</td>
+          <td>계정 정보, 설정, 업무 데이터, 결제 정보, 기기 정보, 해지 설문</td>
+          <td>대한민국(서울) 데이터센터(Amazon Web Services)</td>
+        </tr>
+        <tr>
+          <td>GitHub, Inc.</td>
+          <td>서버 데이터베이스 일일 백업본 보관(<b>운영자만 풀 수 있는 암호화 파일</b>로만 보관, 30일 후 자동 삭제)</td>
+          <td>백업 시점의 서버 데이터 전체(암호화됨)</td>
+          <td>미국 등 GitHub 데이터센터</td>
+        </tr>
+        <tr>
+          <td>Google LLC<br>(Google 로그인)</td>
+          <td>Google 계정으로 로그인</td>
+          <td>Google 계정 식별자, 이메일, 이름, 프로필 사진 URL</td>
+          <td>미국 등 Google 데이터센터</td>
+        </tr>
+        <tr>
+          <td>Google LLC<br>(Google Play 결제)</td>
+          <td>구독 결제 처리, 구매 검증, 구독 상태 알림</td>
+          <td>구매 토큰, 상품 ID, 구독·거래 내역</td>
+          <td>미국 등 Google 데이터센터</td>
+        </tr>
+        <tr>
+          <td>Google LLC<br>(Firebase Crashlytics)</td>
+          <td>앱 오류 수집·분석</td>
+          <td>오류 내용, 기기 모델·OS·앱 버전, 설치별 임의 식별값</td>
+          <td>미국 등 Google 데이터센터</td>
+        </tr>
+      </table>
+    </div>
+    <p style="color:var(--muted);font-size:14px">
+      국외 이전 항목의 이전 일시 및 방법 : 서비스 이용 시점에 네트워크를 통해 전송 ·
+      이전받는 자의 개인정보 보호책임자 연락처 :
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>,
+      <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase 개인정보처리방침</a> 참조 ·
+      보유 기간 : 위탁 계약 종료 또는 위 제5항의 보유 기간까지 ·
+      국외 이전을 원하지 않으시면 Google 로그인 대신 이메일로 가입하실 수 있으며, 오류 로그 수집은 서비스 제공에 필요한 최소한의 정보만 대상으로 합니다.
+    </p>
+  </section>
+
+  <section id="s8">
+    <h2><span class="n">8</span>광고 미게재</h2>
+    <p>
+      <b>본 서비스는 광고를 게재하지 않으며, 광고 식별자(AAID)를 수집하지 않고, 이용자의 정보를 광고 목적으로 이용하거나 제공하지 않습니다.</b>
+    </p>
+  </section>
+
+  <section id="s9">
+    <h2><span class="n">9</span>이용자의 권리와 행사 방법</h2>
+    <p>이용자는 언제든지 다음 권리를 행사할 수 있습니다.</p>
+    <ul>
+      <li><b>열람·정정·삭제</b> : 앱에서 고객·거래·활동 기록·일정을 직접 조회·수정·삭제</li>
+      <li><b>탈퇴(계정과 모든 데이터 삭제)</b> : 앱 <b>더보기 → 회원 탈퇴</b>, 또는
+          <a href="delete-account.html">계정 삭제 요청 페이지</a>의 이메일 요청</li>
+      <li>위 방법 외에 아래 문의처로 요청하실 수 있으며, 접수 후 지체 없이 처리합니다.</li>
+    </ul>
+    <div class="warn">
+      회원 탈퇴 시 고객·거래·활동 기록·일정이 모두 삭제되며 복구할 수 없습니다.
+      Pro 구독은 탈퇴만으로 해지되지 않으니 Google Play에서 먼저 해지해 주세요.
+    </div>
+  </section>
+
+  <section id="s10">
+    <h2><span class="n">10</span>개인정보의 파기 절차 및 방법</h2>
+    <ul>
+      <li>보유 기간이 지나거나 처리 목적이 달성된 개인정보는 지체 없이 파기합니다.</li>
+      <li>전자적 파일 형태의 정보는 복구·재생이 불가능한 방법으로 영구 삭제합니다.</li>
+      <li>회원 탈퇴 시 서버에서 인증 계정을 삭제하며, 이에 연결된 설정·업무 데이터·기기·구독 사본·해지 설문이 함께 삭제됩니다.
+          이용자 기기의 데이터와 앱 잠금 설정도 즉시 삭제됩니다.</li>
+    </ul>
+  </section>
+
+  <section id="s11">
+    <h2><span class="n">11</span>개인정보의 안전성 확보 조치</h2>
+    <ul>
+      <li>모든 통신 구간은 HTTPS(TLS)로 암호화하여 전송합니다.</li>
+      <li>데이터베이스 행 단위 접근 제어로 <b>이용자는 자신의 데이터만 조회·수정</b>할 수 있도록 제한합니다.</li>
+      <li>이용자 기기에 저장되는 데이터는 <b>암호화된 데이터베이스</b>에 저장하며, 암호 키는 기기의 보안 저장소(Android Keystore)에 보관합니다.
+          로그인 정보도 같은 방식으로 암호화해 저장합니다.</li>
+      <li>앱 잠금(PIN·지문·얼굴)을 켜면 앱을 열 때 본인 확인을 거치며, 최근 앱 화면과 스크린샷에서 내용이 가려집니다.
+          PIN은 원문이 아닌 변환값(해시)으로만 저장합니다.</li>
+      <li>요금제·구독 상태는 앱에서 바꿀 수 없으며, Google Play 서버 검증을 거친 경우에만 서버가 변경합니다.</li>
+      <li>서버 관리용 키는 서버의 보안 저장소에만 보관하며 앱에 포함하지 않습니다.</li>
+      <li>기기 백업(Google 자동 백업·기기 간 이전)으로 앱 데이터가 옮겨지지 않도록 설정했습니다.</li>
+    </ul>
+  </section>
+
+  <section id="s12">
+    <h2><span class="n">12</span>만 14세 미만 아동의 개인정보</h2>
+    <p>
+      본 서비스는 만 14세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 고의로 수집하지 않습니다.
+      만 14세 미만 아동의 개인정보가 수집된 사실을 알게 된 경우 즉시 해당 정보를 파기합니다.
+    </p>
+  </section>
+
+  <section id="s13">
+    <h2><span class="n">13</span>개인정보 보호책임자 및 문의처</h2>
+    <ul>
+      <li><b>상호</b> : 에스와이파크 (SYPark)</li>
+      <li><b>개인정보 보호책임자</b> : 박상윤 (대표)</li>
+      <li><b>사업자등록번호</b> : 733-49-01262</li>
+      <li><b>이메일</b> : <a href="mailto:starmotor.dev@gmail.com">starmotor.dev@gmail.com</a></li>
+    </ul>
+    <p style="color:var(--muted);font-size:14px">
+      서비스 이용 조건과 구독·환불에 관한 사항은
+      <a href="terms.html">서비스 이용약관</a>에서 확인하실 수 있습니다.
+    </p>
+    <p style="color:var(--muted);font-size:14px">
+      개인정보 침해에 대한 신고·상담이 필요하신 경우 개인정보침해신고센터(privacy.kisa.or.kr, 국번없이 118),
+      개인정보분쟁조정위원회(kopico.go.kr, 1833-6972), 대검찰청 사이버수사과(1301),
+      경찰청 사이버수사국(ecrm.police.go.kr, 182)으로 문의하실 수 있습니다.
+    </p>
+  </section>
+
+  <section id="s14">
+    <h2><span class="n">14</span>개인정보처리방침의 변경</h2>
+    <p>
+      법령·서비스의 변경에 따라 본 방침이 수정될 수 있으며, 변경 시 앱 내 공지 또는 본 페이지를 통해
+      시행 7일 전부터 알립니다. 이용자에게 불리한 중대한 변경의 경우 30일 전에 알립니다.
+    </p>
+
+    <h3 style="font-size:17px;margin-top:22px">개정 이력</h3>
+    <div class="tbl">
+      <table>
+        <tr><th>시행일</th><th>주요 변경 내용</th></tr>
+        <tr>
+          <td>2026년 9월 19일<br>(현행)</td>
+          <td>최초 수립·공개</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  고객관리 수첩 · 에스와이파크(SYPark) · 대표 박상윤 · 사업자등록번호 733-49-01262<br>
+  문의 <a href="mailto:starmotor.dev@gmail.com">starmotor.dev@gmail.com</a><br>
+  시행일자 2026년 9월 19일
+</footer>
+
+</body>
+</html>

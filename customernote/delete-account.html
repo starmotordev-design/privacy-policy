@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>계정 삭제 요청 — 고객관리 수첩</title>
+<style>
+  :root{
+    --bg:#f5f7fa; --card:#ffffff; --text:#191f28; --muted:#5d6878; --line:#e5e8eb;
+    --brand:#3182f6; --brand2:#1b64da; --soft:#e8f3ff; --warn-bg:#fff7ed; --warn-line:#fdba74;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0b0f17; --card:#141a24; --text:#e9edf3; --muted:#9aa5b4; --line:#252d3a;
+      --brand:#5a9dff; --brand2:#3182f6; --soft:#16233a; --warn-bg:#2a1f14; --warn-line:#a16207;
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);line-height:1.75;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Malgun Gothic",sans-serif;
+    -webkit-text-size-adjust:100%}
+
+  .hero{background:linear-gradient(135deg,#1b64da 0%,#3182f6 55%,#4fa3ff 100%);color:#fff;
+    padding:56px 24px 64px;position:relative;overflow:hidden}
+  .hero::after{content:"";position:absolute;top:-120px;right:-60px;width:360px;height:360px;
+    background:radial-gradient(circle,rgba(255,255,255,.22),transparent 65%)}
+  .hero-in{max-width:820px;margin:0 auto;position:relative;z-index:1}
+  .brand{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:14px;
+    letter-spacing:.4px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+    padding:7px 14px;border-radius:99px}
+  .hero h1{font-size:34px;font-weight:800;letter-spacing:-.8px;margin-top:20px;line-height:1.25}
+  .hero .date{margin-top:12px;font-size:14px;color:rgba(255,255,255,.82)}
+  .tabs{display:flex;gap:8px;margin-top:26px;flex-wrap:wrap}
+  .tabs a{font-size:14px;font-weight:600;text-decoration:none;padding:9px 16px;border-radius:11px;
+    background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.22);transition:.15s}
+  .tabs a:hover{background:rgba(255,255,255,.24)}
+  .tabs a[aria-current]{background:#fff;color:#1b64da;border-color:#fff}
+
+  main{max-width:820px;margin:-32px auto 0;padding:0 24px 80px;position:relative;z-index:2}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px 30px;
+    box-shadow:0 10px 40px rgba(20,24,60,.06)}
+  @media (max-width:600px){ .card{padding:26px 20px} .hero h1{font-size:26px} }
+
+  .lead{font-size:15.5px;color:var(--muted)}
+  section{margin-top:40px;scroll-margin-top:20px}
+  h2{font-size:19px;font-weight:800;letter-spacing:-.3px;display:flex;align-items:center;gap:11px}
+  h2 .n{flex:0 0 auto;width:28px;height:28px;border-radius:9px;font-size:13px;
+    background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800}
+  section > p, section > ul, section > ol, section > .note, section > .warn, section > .tbl{margin-top:14px}
+  p{font-size:15px}
+  ul,ol{padding-left:20px}
+  li{font-size:15px;margin-bottom:7px}
+  b,strong{font-weight:700}
+
+  .steps{list-style:none;padding:0;counter-reset:step}
+  .steps li{counter-increment:step;position:relative;padding-left:44px;margin-bottom:15px}
+  .steps li::before{content:counter(step);position:absolute;left:0;top:1px;width:28px;height:28px;
+    border-radius:9px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#fff;
+    font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+
+  .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+  th,td{border:1px solid var(--line);padding:11px 13px;text-align:left;vertical-align:top}
+  th{background:var(--soft);font-weight:700;white-space:nowrap}
+
+  .note{background:var(--soft);border-left:3px solid var(--brand);border-radius:0 12px 12px 0;
+    padding:15px 18px;font-size:14.5px;color:var(--text)}
+  .note b{color:var(--brand)}
+  .warn{background:var(--warn-bg);border-left:3px solid var(--warn-line);border-radius:0 12px 12px 0;
+    padding:15px 18px;font-size:14.5px}
+
+  a{color:var(--brand)}
+  footer{max-width:820px;margin:0 auto;padding:0 24px 60px;color:var(--muted);font-size:13.5px}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-in">
+    <span class="brand">✦ 고객관리 수첩</span>
+    <h1>계정 및 데이터 삭제 요청</h1>
+    <div class="date">에스와이파크(SYPark) · 대표 박상윤 · 사업자등록번호 733-49-01262 · 문의 starmotor.dev@gmail.com</div>
+    <div class="tabs">
+      <a href="privacy.html">개인정보처리방침</a>
+      <a href="terms.html">이용약관</a>
+      <a href="delete-account.html" aria-current="page">계정 삭제</a>
+    </div>
+  </div>
+</div>
+
+<main>
+<div class="card">
+
+  <p class="lead">
+    이 페이지는 <b>고객관리 수첩</b> 앱(패키지명 <code>com.sypark.customernote</code>, 운영자 에스와이파크)의
+    계정 및 관련 데이터 삭제를 요청하는 방법을 안내합니다. 앱 안에서 직접 삭제하거나, 앱을 이미 삭제하셨다면
+    이메일로 요청하실 수 있습니다.
+  </p>
+
+  <section id="subscription">
+    <div class="warn">
+      <b>Pro 구독 중이라면 먼저 해지해 주세요.</b> 계정을 삭제하거나 앱을 지워도 Google Play 구독 결제는 멈추지 않습니다.
+      Google Play 스토어 → 프로필 → <b>결제 및 정기 결제 → 정기 결제</b>에서 고객관리 수첩 구독을 해지할 수 있습니다.
+    </div>
+  </section>
+
+  <section id="in-app">
+    <h2><span class="n">1</span>앱에서 직접 삭제하기 (권장)</h2>
+    <p>가장 빠른 방법입니다. 요청 즉시 처리됩니다.</p>
+    <ol class="steps">
+      <li>고객관리 수첩 앱을 실행하고 <b>로그인</b>합니다.</li>
+      <li>하단 탭에서 <b>더보기</b>를 엽니다.</li>
+      <li>계정 칸 아래의 <b>"회원 탈퇴"</b>를 누릅니다.</li>
+      <li>삭제될 데이터 안내를 읽고, 본인 확인(이메일 계정은 비밀번호, Google 계정은 Google 계정 선택)을 한 뒤
+          <b>"위 내용을 확인했고 탈퇴합니다"</b>에 체크하고 <b>"탈퇴하기"</b>를 누릅니다.</li>
+      <li>처리가 끝나면 자동으로 로그아웃되며, 계정과 데이터가 삭제됩니다.</li>
+    </ol>
+    <div class="warn">
+      <b>되돌릴 수 없습니다.</b> 고객·회사·거래·활동 기록·일정이 모두 사라지며 복구할 수 없습니다.
+    </div>
+  </section>
+
+  <section id="by-email">
+    <h2><span class="n">2</span>이메일로 요청하기</h2>
+    <p>앱을 이미 삭제했거나 로그인할 수 없는 경우, 아래 주소로 요청해 주세요.</p>
+    <ol class="steps">
+      <li><a href="mailto:starmotor.dev@gmail.com?subject=%5B%EA%B3%A0%EA%B0%9D%EA%B4%80%EB%A6%AC%20%EC%88%98%EC%B2%A9%5D%20%EA%B3%84%EC%A0%95%20%EC%82%AD%EC%A0%9C%20%EC%9A%94%EC%B2%AD">starmotor.dev@gmail.com</a>
+        으로 메일을 보냅니다. (제목: <b>[고객관리 수첩] 계정 삭제 요청</b>)</li>
+      <li>본문에 <b>가입에 사용한 이메일 주소</b>를 적어 주세요. 본인 확인을 위해
+        <b>가입할 때 사용한 이메일 계정에서 직접</b> 보내주셔야 합니다.</li>
+      <li>본인 확인 후 <b>영업일 기준 7일 이내</b>에 삭제 처리하고, 완료 사실을 회신으로 알려드립니다.</li>
+    </ol>
+    <div class="note">
+      운영자는 요청 처리 목적으로만 해당 메일을 사용하며, 처리 완료 후 <b>30일 이내</b>에 요청 메일을 파기합니다.
+    </div>
+  </section>
+
+  <section id="what">
+    <h2><span class="n">3</span>삭제되는 데이터와 보관되는 데이터</h2>
+    <div class="tbl">
+      <table>
+        <tr><th>구분</th><th>항목</th><th>처리</th></tr>
+        <tr>
+          <td rowspan="5"><b>삭제</b></td>
+          <td>계정 정보 (이메일, 이름, Google 계정 식별자·프로필 사진 URL)</td>
+          <td>즉시 삭제</td>
+        </tr>
+        <tr>
+          <td>고객·회사·거래·활동 기록·일정 등 이용자가 입력한 모든 데이터, 설정</td>
+          <td>즉시 삭제</td>
+        </tr>
+        <tr>
+          <td>기기 목록, 서버에 둔 구독 정보 사본, 해지 설문 응답</td>
+          <td>즉시 삭제</td>
+        </tr>
+        <tr>
+          <td>기기에 저장된 데이터와 앱 잠금 설정</td>
+          <td>앱에서 탈퇴하면 즉시 삭제 (이메일로 요청한 경우 앱을 지우면 삭제됩니다)</td>
+        </tr>
+        <tr>
+          <td>서버 일일 백업본</td>
+          <td>최대 <b>30일</b> 뒤 백업 순환으로 자동 삭제 (장애 복구 외에는 쓰지 않음)</td>
+        </tr>
+        <tr>
+          <td rowspan="2"><b>보관</b></td>
+          <td>대금 결제 및 재화 공급, 청약철회에 관한 기록</td>
+          <td><b>5년</b> (전자상거래 등에서의 소비자보호에 관한 법률) — Google Play에 보관</td>
+        </tr>
+        <tr>
+          <td>소비자 불만 또는 분쟁 처리에 관한 기록</td>
+          <td><b>3년</b> (동법)</td>
+        </tr>
+      </table>
+    </div>
+    <div class="note">
+      법령에 따라 보관하는 기록은 <b>보관 목적 외의 용도로 이용하지 않으며</b>, 보관 기간이 지나면 지체 없이 파기합니다.
+      Google Play를 통한 결제 수단 정보(카드번호 등)는 운영자가 보관하지 않습니다.
+    </div>
+    <p style="color:var(--muted);font-size:14px">
+      자세한 내용은 <a href="privacy.html">개인정보처리방침</a> 제5항(보유 기간)과 제10항(파기)을 참고하세요.
+    </p>
+  </section>
+
+  <section id="notes">
+    <h2><span class="n">4</span>알아두실 점</h2>
+    <ul>
+      <li>계정을 삭제해도 <b>Google Play의 구매 내역</b>은 Google 계정에 남습니다. 이는 운영자가 삭제할 수 없습니다.</li>
+      <li>앱만 삭제(제거)하는 것으로는 계정과 서버의 데이터가 지워지지 않습니다. 위 1번 또는 2번 절차를 진행해 주세요.</li>
+      <li>삭제 후 같은 이메일로 다시 가입할 수 있으나, 이전 데이터는 복구되지 않습니다.</li>
+      <li>계정은 유지하고 일부 데이터만 지우려면 앱에서 해당 고객·거래·기록을 직접 삭제하면 됩니다.
+          삭제한 고객은 30일 뒤 서버에서 완전히 삭제됩니다.</li>
+    </ul>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  고객관리 수첩 · 에스와이파크(SYPark) · 사업자등록번호 733-49-01262 · 문의 <a href="mailto:starmotor.dev@gmail.com">starmotor.dev@gmail.com</a><br>
+  시행일자 2026년 9월 19일
+</footer>
+
+</body>
+</html>
